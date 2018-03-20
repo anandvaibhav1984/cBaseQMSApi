@@ -1,0 +1,191 @@
+﻿@model cBaseQMS.Models.TestExpressionViewModel
+@{
+    ViewBag.Title = "Index";
+}
+<script>
+    $(document).ready(function () {
+        $('.testmasters-menubar').css('display', 'block');
+        $('.test-menubar li, .testmasters-menubar li').removeClass('active-page');
+        $('.TestMaster, .Exp').addClass('active-page');
+    });
+</script>
+@*@using (Html.BeginForm("Index", "TestExpression", FormMethod.Post, new { enctype = "multipart/form-data", onsubmit = "GetTestDetails();" }))
+{*@
+
+    <div class="test-master-subpage">
+        <div class="col-xs-12 tests-configuration">
+
+
+
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="Configuration" class="tests-select control-label col-xs-2">Test Master:</label>
+                    @*Add class "disable-state" on below div when user hit on edit expression button*@
+                    <div class="col-xs-6 col-sm-5 col-lg-4 padding-left-zero">
+                        @Html.DropDownListFor(model => Model.TestMaster, new SelectList(Model.TestMasterItems, "Value", "Text"), "Please select", new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="Configuration" class="tests-select control-label col-xs-2">Test Name:</label>
+                    @*Add class "disable-state" on below div when user hit on edit expression button*@
+                    <div class="col-xs-6 col-sm-5 col-lg-4 padding-left-zero">
+                        <select class="form-control" id="ddlTests">
+                        </select>
+                    </div>
+                    @*Below Cancle button appear when user hit on edit expression button*@
+                    <div class="col-xs-4 col-sm-5 col-lg-6 padding-all-zero btn-sw-view" style="display:none">
+                        <div class="col-xs-5 col-sm-4 col-lg-3 pull-right padding-right-zero">
+                            <button type="button" id="" title="Cancel" class="btn btn-default btn-block common-btn common-btn-animation reset-btn">Cancle</button>
+                        </div>
+                    </div>
+                </div>
+                @*Below Expression section disapper when user hit on edit expression button*@
+                <div class="form-group description-block before-edit-exp">
+                    <label for="Configuration" class="control-label col-xs-2">Description:</label>
+                    <div class="col-xs-7 padding-left-zero">
+                        <input type="text" id="txtDescription" class="form-control" placeholder="*Testdescription, define purpose, expression, calculations, etc." />
+                    </div>
+                    <div class="col-xs-3 padding-all-zero btn-sw-view">
+                        <div class="col-xs-6 padding-right-zero  pull-right">
+                            <button id="btnSave" title="Save" class="btn btn-default btn-block common-btn common-btn-animation create-btn">Save</button>
+                        </div>
+                    </div>
+                </div>
+                @*Add class "disable-state" on below div when user hit on edit expression button*@
+                <div class="form-group" style="margin-bottom:0px">
+                    <label for="Configuration" class="control-label col-xs-2 col-sm-2 col-lg-2">Expression:</label>
+                    <div class="col-xs-10 panel panel-default  padding-all-15px exp-command-btn" id="dvExpression">
+                    </div>
+                </div>
+                @*Below section disappear when user hit edit expression to edit the expressions*@
+
+                <div class="form-group padding-left-zero">
+                    <div id="dvOptions">
+                        <div class="col-xs-2 col-sm-offset-2 padding-left-zero">
+                            @Html.DropDownList("ddlComponent", new SelectList(Model.ComponentItems, "Value", "Text"), "Please select", new { @class = "form-control" })
+                        </div>
+                        <div class="col-xs-2 padding-left-zero">
+                            <select class="form-control" id="ddlComponentItems"></select>
+                        </div>
+                        <div class="col-xs-1 padding-left-zero">
+                            <select class="form-control" id="ddlOperator">
+                                <option value="0">Operator</option>
+                                <option>+</option>
+                                <option>-</option>
+                                <option>*</option>
+                                <option>%</option>
+                                <option>/</option>
+                                <option>|</option>
+                                <option>^</option>
+                                <option>!</option>
+                                <option>></option>
+                                <option><</option>
+                                <option>!=</option>
+                                <option>>=</option>
+                                <option>&&</option>
+                                <option>||</option>
+                                <option><=</option>
+                                <option>==</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-primary btn-inline common-btn common-btn-animation create-btn add-cmd-btn" id="btnAdd">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-inline common-btn common-btn-animation submit-btn" id="btnStartBrace">(</button>
+                        <button type="button" class="btn btn-primary btn-inline common-btn common-btn-animation submit-btn" id="btnEndBrace">)</button>
+                        <button type="button" title="clear" class="btn btn-primary btn-inline common-btn common-btn-animation submit-btn reset-btn" id="btnClear">clear</button>
+                    </div>
+                    <button type="button" id="btnEvaluate" style="display:none;" title="Evaluate" class="btn btn-default btn-inline common-btn common-btn-animation info-btn pull-right btn-evaluate">Evaluate</button>
+                </div>
+                @*Below section appear when user hit edit expression to edit the expressions*@
+                <div class="form-group after-edit-exp" style="display:none">
+                    <label for="" class="tests-select control-label col-xs-2"></label>
+                    <div class="col-xs-10 padding-all-zero">
+                        <div class="tableblock  inputTable col-xs-9 col-md-4 padding-all-zero">
+                            <table class="table table-bordered table-striped cBase-custom-table">
+                                <thead>
+                                    <tr>
+                                        <th>Inputs</th>
+                                        <th>Values</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>FLT-Input1</td>
+                                        <td><input type="text" value="" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>FLT-Input2</td>
+                                        <td><input type="text" value="" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>FLT-Input3</td>
+                                        <td><input type="text" value="" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>FLT-Input4</td>
+                                        <td><input type="text" value="" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>FLT-Input1</td>
+                                        <td><input type="text" value="" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>FLT-Input1</td>
+                                        <td><input type="text" value="" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>FLT-Input1</td>
+                                        <td><input type="text" value="" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>FLT-Input1</td>
+                                        <td><input type="text" value="" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td>FLT-Input1</td>
+                                        <td><input type="text" value="" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-xs-3 col-md-2 cal-block">
+                            <button type="button" title="Test" class="btn btn-default btn-block common-btn common-btn-animation info-btn">Test</button>
+                            <button type="button" data-toggle="modal" title="Calculations" data-target="#CalculateResult" class="btn btn-default btn-block common-btn common-btn-animation info-btn">Calculations</button>
+                            <button type="button" id="" title="Clear" class="btn btn-default btn-block common-btn common-btn-animation info-btn">Clear</button>
+                        </div>
+                        <div class="col-xs-12 col-sm-12  col-md-6 tableblock calculated-result-block">
+                            Calculated Results are here...........
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Modal -->
+        <div class="modal fade popup-bck " id="CalculateResult" role="dialog">
+            <div class="modal-dialog popup-content-box Testmaster-exp">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Calculated Result</h4>
+                    </div>
+                    <div class="modal-body coreModal-body">
+                        <div class="exp-calculation-result"></div>
+                        <button type="button" id="cancelTestMaster" data-dismiss="modal" class="btn btn-primary btn-inline common-btn common-btn-animation reset-btn exp-close-btn ">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+@*}*@
+@section Scripts
+{
+    <script src="~/Areas/Scripts/TestExpression.js"></script>
+}

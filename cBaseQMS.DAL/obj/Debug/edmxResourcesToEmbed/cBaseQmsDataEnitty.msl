@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="cBaseDevModelStoreContainer" CdmEntityContainer="cBaseDevEntities">
+    <EntitySetMapping Name="InputFieldsValues">
+      <EntityTypeMapping TypeName="cBaseDevModel.InputFieldsValue">
+        <MappingFragment StoreEntitySet="InputFieldsValue">
+          <ScalarProperty Name="InputFieldValueID" ColumnName="InputFieldValueID" />
+          <ScalarProperty Name="InputFieldID" ColumnName="InputFieldID" />
+          <ScalarProperty Name="TestCycle" ColumnName="TestCycle" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LocationAttribtes">
+      <EntityTypeMapping TypeName="cBaseDevModel.LocationAttribte">
+        <MappingFragment StoreEntitySet="LocationAttribtes">
+          <ScalarProperty Name="LocAttrID" ColumnName="LocAttrID" />
+          <ScalarProperty Name="MasterLocationID" ColumnName="MasterLocationID" />
+          <ScalarProperty Name="LocAttrName" ColumnName="LocAttrName" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="UOMID" ColumnName="UOMID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PartAttributes">
+      <EntityTypeMapping TypeName="cBaseDevModel.PartAttribute">
+        <MappingFragment StoreEntitySet="PartAttributes">
+          <ScalarProperty Name="PartAttrID" ColumnName="PartAttrID" />
+          <ScalarProperty Name="PartAttrName" ColumnName="PartAttrName" />
+          <ScalarProperty Name="PartMasterID" ColumnName="PartMasterID" />
+          <ScalarProperty Name="TestID" ColumnName="TestID" />
+          <ScalarProperty Name="InputFieldID" ColumnName="InputFieldID" />
+          <ScalarProperty Name="MinValue" ColumnName="MinValue" />
+          <ScalarProperty Name="MaxValue" ColumnName="MaxValue" />
+          <ScalarProperty Name="UOMID" ColumnName="UOMID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TestAttributes">
+      <EntityTypeMapping TypeName="cBaseDevModel.TestAttribute">
+        <MappingFragment StoreEntitySet="TestAttributes">
+          <ScalarProperty Name="TestAttrID" ColumnName="TestAttrID" />
+          <ScalarProperty Name="TestID" ColumnName="TestID" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="Attribute" ColumnName="Attribute" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TestCalculatedFields">
+      <EntityTypeMapping TypeName="cBaseDevModel.TestCalculatedField">
+        <MappingFragment StoreEntitySet="TestCalculatedFields">
+          <ScalarProperty Name="CalcFieldID" ColumnName="CalcFieldID" />
+          <ScalarProperty Name="TestID" ColumnName="TestID" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Calculation" ColumnName="Calculation" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TestInputs">
+      <EntityTypeMapping TypeName="cBaseDevModel.TestInput">
+        <MappingFragment StoreEntitySet="TestInputs">
+          <ScalarProperty Name="TestInputID" ColumnName="TestInputID" />
+          <ScalarProperty Name="TestID" ColumnName="TestID" />
+          <ScalarProperty Name="InputName" ColumnName="InputName" />
+          <ScalarProperty Name="UOM" ColumnName="UOM" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Rows" ColumnName="Rows" />
+          <ScalarProperty Name="Columns" ColumnName="Columns" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TestMasters">
+      <EntityTypeMapping TypeName="cBaseDevModel.TestMaster">
+        <MappingFragment StoreEntitySet="TestMaster">
+          <ScalarProperty Name="TestMasterID" ColumnName="TestMasterID" />
+          <ScalarProperty Name="TestMasterName" ColumnName="TestMasterName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UoMs">
+      <EntityTypeMapping TypeName="cBaseDevModel.UoM">
+        <MappingFragment StoreEntitySet="UoM">
+          <ScalarProperty Name="UOMName" ColumnName="UOMName" />
+          <ScalarProperty Name="UOMID" ColumnName="UOMID" />
+          <ScalarProperty Name="UOM1" ColumnName="UOM" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LocationMasters">
+      <EntityTypeMapping TypeName="cBaseDevModel.LocationMaster">
+        <MappingFragment StoreEntitySet="LocationMaster">
+          <ScalarProperty Name="UpdatedTimestamp" ColumnName="UpdatedTimestamp" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LocationDescription" ColumnName="LocationDescription" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="LocationMasterID" ColumnName="LocationMasterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PartMasters">
+      <EntityTypeMapping TypeName="cBaseDevModel.PartMaster">
+        <MappingFragment StoreEntitySet="PartMaster">
+          <ScalarProperty Name="UpdatedTimestamp" ColumnName="UpdatedTimestamp" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="PartDescription" ColumnName="PartDescription" />
+          <ScalarProperty Name="PartNumber" ColumnName="PartNumber" />
+          <ScalarProperty Name="PartMasterID" ColumnName="PartMasterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Components">
+      <EntityTypeMapping TypeName="cBaseDevModel.Component">
+        <MappingFragment StoreEntitySet="Components">
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="ComponentName" ColumnName="ComponentName" />
+          <ScalarProperty Name="ComponentID" ColumnName="ComponentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InputFields">
+      <EntityTypeMapping TypeName="cBaseDevModel.InputField">
+        <MappingFragment StoreEntitySet="InputFields">
+          <ScalarProperty Name="TestID" ColumnName="TestID" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CurrentFieldValue" ColumnName="CurrentFieldValue" />
+          <ScalarProperty Name="FieldName" ColumnName="FieldName" />
+          <ScalarProperty Name="FieldRowNo" ColumnName="FieldRowNo" />
+          <ScalarProperty Name="FieldColumnName" ColumnName="FieldColumnName" />
+          <ScalarProperty Name="TestInputID" ColumnName="TestInputID" />
+          <ScalarProperty Name="InputFieldID" ColumnName="InputFieldID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equations">
+      <EntityTypeMapping TypeName="cBaseDevModel.Equation">
+        <MappingFragment StoreEntitySet="Equations">
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Condition" ColumnName="Condition" />
+          <ScalarProperty Name="EquationString" ColumnName="EquationString" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="EquationName" ColumnName="EquationName" />
+          <ScalarProperty Name="TestID" ColumnName="TestID" />
+          <ScalarProperty Name="EquationID" ColumnName="EquationID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetTestMasterByTestId" FunctionName="cBaseDevModel.Store.usp_GetTestMasterByTestId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cBaseDevModel.usp_GetTestMasterByTestId">
+          <ScalarProperty Name="TestMasterID" ColumnName="TestMasterID" />
+          <ScalarProperty Name="TestMasterName" ColumnName="TestMasterName" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_SaveLocationAndPartMapping" FunctionName="cBaseDevModel.Store.usp_SaveLocationAndPartMapping" />
+    <FunctionImportMapping FunctionImportName="usp_UpdateLocationAndPartMapping" FunctionName="cBaseDevModel.Store.usp_UpdateLocationAndPartMapping" />
+    <EntitySetMapping Name="AppParameters">
+      <EntityTypeMapping TypeName="cBaseDevModel.AppParameter">
+        <MappingFragment StoreEntitySet="AppParameter">
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="ParamValue" ColumnName="ParamValue" />
+          <ScalarProperty Name="ParamName" ColumnName="ParamName" />
+          <ScalarProperty Name="AppParamID" ColumnName="AppParamID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MathConstants">
+      <EntityTypeMapping TypeName="cBaseDevModel.MathConstant">
+        <MappingFragment StoreEntitySet="MathConstants">
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="ConstantName" ColumnName="ConstantName" />
+          <ScalarProperty Name="ConstantID" ColumnName="ConstantID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TestMasterMappings">
+      <EntityTypeMapping TypeName="cBaseDevModel.TestMasterMapping">
+        <MappingFragment StoreEntitySet="TestMasterMapping">
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="LocationMasterID" ColumnName="LocationMasterID" />
+          <ScalarProperty Name="PartMasterID" ColumnName="PartMasterID" />
+          <ScalarProperty Name="TestMasterID" ColumnName="TestMasterID" />
+          <ScalarProperty Name="TestMasterMapID" ColumnName="TestMasterMapID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="usp_GetLocationAndPartMapping" FunctionName="cBaseDevModel.Store.usp_GetLocationAndPartMapping">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="cBaseDevModel.usp_GetLocationAndPartMapping">
+          <ScalarProperty Name="TestMasterMapID" ColumnName="TestMasterMapID" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="PartNumber" ColumnName="PartNumber" />
+          <ScalarProperty Name="TestMasterID" ColumnName="TestMasterID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Tests">
+      <EntityTypeMapping TypeName="cBaseDevModel.Test">
+        <MappingFragment StoreEntitySet="Tests">
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="IsExecuted" ColumnName="IsExecuted" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedOn" ColumnName="ModifiedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Expression" ColumnName="Expression" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="Descriptions" ColumnName="Descriptions" />
+          <ScalarProperty Name="TestName" ColumnName="TestName" />
+          <ScalarProperty Name="TestMasterID" ColumnName="TestMasterID" />
+          <ScalarProperty Name="TestID" ColumnName="TestID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vWLocationAttributes">
+      <EntityTypeMapping TypeName="cBaseDevModel.vWLocationAttribute">
+        <MappingFragment StoreEntitySet="vWLocationAttributes">
+          <ScalarProperty Name="TestMasterID" ColumnName="TestMasterID" />
+          <ScalarProperty Name="UOMID" ColumnName="UOMID" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="LocAttrName" ColumnName="LocAttrName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ELMAH_Error">
+      <EntityTypeMapping TypeName="cBaseDevModel.ELMAH_Error">
+        <MappingFragment StoreEntitySet="ELMAH_Error">
+          <ScalarProperty Name="AllXml" ColumnName="AllXml" />
+          <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+          <ScalarProperty Name="TimeUtc" ColumnName="TimeUtc" />
+          <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+          <ScalarProperty Name="User" ColumnName="User" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Host" ColumnName="Host" />
+          <ScalarProperty Name="Application" ColumnName="Application" />
+          <ScalarProperty Name="ErrorId" ColumnName="ErrorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

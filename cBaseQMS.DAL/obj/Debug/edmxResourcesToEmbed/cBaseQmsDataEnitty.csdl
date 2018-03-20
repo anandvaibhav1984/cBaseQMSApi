@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cBaseDevModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="InputFieldsValue">
+    <Key>
+      <PropertyRef Name="InputFieldValueID" />
+    </Key>
+    <Property Name="InputFieldValueID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InputFieldID" Type="Int32" Nullable="false" />
+    <Property Name="TestCycle" Type="Int32" Nullable="false" />
+    <Property Name="Value" Type="Decimal" Precision="18" Scale="5" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="InputField" Relationship="cBaseDevModel.FK_InputFields_InputFieldsValue" FromRole="InputFieldsValue" ToRole="InputField" />
+  </EntityType>
+  <EntityType Name="LocationAttribte">
+    <Key>
+      <PropertyRef Name="LocAttrID" />
+    </Key>
+    <Property Name="LocAttrID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MasterLocationID" Type="Int32" Nullable="false" />
+    <Property Name="LocAttrName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Value" Type="Decimal" Precision="18" Scale="5" />
+    <Property Name="UOMID" Type="Int32" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="PartAttribute">
+    <Key>
+      <PropertyRef Name="PartAttrID" />
+    </Key>
+    <Property Name="PartAttrID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PartAttrName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PartMasterID" Type="Int32" Nullable="false" />
+    <Property Name="TestID" Type="Int32" Nullable="false" />
+    <Property Name="InputFieldID" Type="Int32" Nullable="false" />
+    <Property Name="MinValue" Type="Decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="MaxValue" Type="Decimal" Precision="18" Scale="5" />
+    <Property Name="UOMID" Type="Int32" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Test" Relationship="cBaseDevModel.FK_PartAttributes_Tests" FromRole="PartAttribute" ToRole="Test" />
+  </EntityType>
+  <EntityType Name="TestAttribute">
+    <Key>
+      <PropertyRef Name="TestAttrID" />
+    </Key>
+    <Property Name="TestAttrID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TestID" Type="Int32" Nullable="false" />
+    <Property Name="Sequence" Type="Int16" Nullable="false" />
+    <Property Name="Attribute" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Value" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Test" Relationship="cBaseDevModel.FK_TestAttributes_Tests" FromRole="TestAttribute" ToRole="Test" />
+  </EntityType>
+  <EntityType Name="TestCalculatedField">
+    <Key>
+      <PropertyRef Name="CalcFieldID" />
+    </Key>
+    <Property Name="CalcFieldID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TestID" Type="Int32" Nullable="false" />
+    <Property Name="Sequence" Type="Byte" Nullable="false" />
+    <Property Name="FieldName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Calculation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Test" Relationship="cBaseDevModel.FK_TestCalculatedFields_Tests" FromRole="TestCalculatedField" ToRole="Test" />
+  </EntityType>
+  <EntityType Name="TestInput">
+    <Key>
+      <PropertyRef Name="TestInputID" />
+    </Key>
+    <Property Name="TestInputID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TestID" Type="Int32" Nullable="false" />
+    <Property Name="InputName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UOM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Rows" Type="Int32" Nullable="false" />
+    <Property Name="Columns" Type="Int32" Nullable="false" />
+    <Property Name="Sequence" Type="Int32" Nullable="false" />
+    <Property Name="Image" Type="Binary" MaxLength="5000" FixedLength="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="InputFields" Relationship="cBaseDevModel.FK_TestInputs_InputFields" FromRole="TestInput" ToRole="InputField" />
+    <NavigationProperty Name="Test" Relationship="cBaseDevModel.FK_Test_TestInputs" FromRole="TestInput" ToRole="Test" />
+  </EntityType>
+  <EntityType Name="TestMaster">
+    <Key>
+      <PropertyRef Name="TestMasterID" />
+    </Key>
+    <Property Name="TestMasterID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TestMasterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <NavigationProperty Name="TestMasterMappings" Relationship="cBaseDevModel.FK_TestMasterMapping_TestMasterMapping" FromRole="TestMaster" ToRole="TestMasterMapping" />
+    <NavigationProperty Name="Tests" Relationship="cBaseDevModel.FK_TestMaster_Tests" FromRole="TestMaster" ToRole="Test" />
+  </EntityType>
+  <EntityType Name="UoM">
+    <Key>
+      <PropertyRef Name="UOMID" />
+    </Key>
+    <Property Name="UOMID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UOM1" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="UOMName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="cBaseDevEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="InputFieldsValues" EntityType="Self.InputFieldsValue" />
+    <EntitySet Name="LocationAttribtes" EntityType="Self.LocationAttribte" />
+    <EntitySet Name="PartAttributes" EntityType="Self.PartAttribute" />
+    <EntitySet Name="TestAttributes" EntityType="Self.TestAttribute" />
+    <EntitySet Name="TestCalculatedFields" EntityType="Self.TestCalculatedField" />
+    <EntitySet Name="TestInputs" EntityType="Self.TestInput" />
+    <EntitySet Name="TestMasters" EntityType="Self.TestMaster" />
+    <EntitySet Name="UoMs" EntityType="Self.UoM" />
+    <EntitySet Name="LocationMasters" EntityType="cBaseDevModel.LocationMaster" />
+    <EntitySet Name="PartMasters" EntityType="cBaseDevModel.PartMaster" />
+    <EntitySet Name="Components" EntityType="cBaseDevModel.Component" />
+    <EntitySet Name="InputFields" EntityType="cBaseDevModel.InputField" />
+    <AssociationSet Name="FK_InputFields_InputFieldsValue" Association="cBaseDevModel.FK_InputFields_InputFieldsValue">
+      <End Role="InputField" EntitySet="InputFields" />
+      <End Role="InputFieldsValue" EntitySet="InputFieldsValues" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestInputs_InputFields" Association="cBaseDevModel.FK_TestInputs_InputFields">
+      <End Role="TestInput" EntitySet="TestInputs" />
+      <End Role="InputField" EntitySet="InputFields" />
+    </AssociationSet>
+    <EntitySet Name="Equations" EntityType="cBaseDevModel.Equation" />
+    <FunctionImport Name="usp_GetTestMasterByTestId" ReturnType="Collection(cBaseDevModel.usp_GetTestMasterByTestId)">
+      <Parameter Name="Testid" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="usp_SaveLocationAndPartMapping">
+      <Parameter Name="TestMasterID" Mode="In" Type="Int32" />
+      <Parameter Name="PartMasterID" Mode="In" Type="Int32" />
+      <Parameter Name="LocationMasterID" Mode="In" Type="Int32" />
+      <Parameter Name="IsActive" Mode="In" Type="Boolean" />
+      <Parameter Name="CreatedBy" Mode="In" Type="Int32" />
+      <Parameter Name="CreatedOn" Mode="In" Type="DateTime" />
+      <Parameter Name="UpdatedBy" Mode="In" Type="Int32" />
+      <Parameter Name="UpdatedOn" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="usp_UpdateLocationAndPartMapping">
+      <Parameter Name="IsActive" Mode="In" Type="Boolean" />
+      <Parameter Name="UpdatedBy" Mode="In" Type="Int32" />
+      <Parameter Name="UpdatedOn" Mode="In" Type="DateTime" />
+      <Parameter Name="TestMasterMapID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="AppParameters" EntityType="cBaseDevModel.AppParameter" />
+    <EntitySet Name="MathConstants" EntityType="cBaseDevModel.MathConstant" />
+    <EntitySet Name="TestMasterMappings" EntityType="cBaseDevModel.TestMasterMapping" />
+    <AssociationSet Name="FK_TestMasterMapping_LocationMaster" Association="cBaseDevModel.FK_TestMasterMapping_LocationMaster">
+      <End Role="LocationMaster" EntitySet="LocationMasters" />
+      <End Role="TestMasterMapping" EntitySet="TestMasterMappings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestMasterMapping_PartMaster" Association="cBaseDevModel.FK_TestMasterMapping_PartMaster">
+      <End Role="PartMaster" EntitySet="PartMasters" />
+      <End Role="TestMasterMapping" EntitySet="TestMasterMappings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestMasterMapping_TestMasterMapping" Association="cBaseDevModel.FK_TestMasterMapping_TestMasterMapping">
+      <End Role="TestMaster" EntitySet="TestMasters" />
+      <End Role="TestMasterMapping" EntitySet="TestMasterMappings" />
+    </AssociationSet>
+    <FunctionImport Name="usp_GetLocationAndPartMapping" ReturnType="Collection(cBaseDevModel.usp_GetLocationAndPartMapping)">
+      <Parameter Name="TestMasterID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Tests" EntityType="cBaseDevModel.Test" />
+    <AssociationSet Name="FK_Equations_Tests" Association="cBaseDevModel.FK_Equations_Tests">
+      <End Role="Test" EntitySet="Tests" />
+      <End Role="Equation" EntitySet="Equations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PartAttributes_Tests" Association="cBaseDevModel.FK_PartAttributes_Tests">
+      <End Role="Test" EntitySet="Tests" />
+      <End Role="PartAttribute" EntitySet="PartAttributes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestAttributes_Tests" Association="cBaseDevModel.FK_TestAttributes_Tests">
+      <End Role="Test" EntitySet="Tests" />
+      <End Role="TestAttribute" EntitySet="TestAttributes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestCalculatedFields_Tests" Association="cBaseDevModel.FK_TestCalculatedFields_Tests">
+      <End Role="Test" EntitySet="Tests" />
+      <End Role="TestCalculatedField" EntitySet="TestCalculatedFields" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Test_TestInputs" Association="cBaseDevModel.FK_Test_TestInputs">
+      <End Role="Test" EntitySet="Tests" />
+      <End Role="TestInput" EntitySet="TestInputs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestMaster_Tests" Association="cBaseDevModel.FK_TestMaster_Tests">
+      <End Role="TestMaster" EntitySet="TestMasters" />
+      <End Role="Test" EntitySet="Tests" />
+    </AssociationSet>
+    <EntitySet Name="vWLocationAttributes" EntityType="cBaseDevModel.vWLocationAttribute" />
+    <EntitySet Name="ELMAH_Error" EntityType="cBaseDevModel.ELMAH_Error" />
+  </EntityContainer>
+  <EntityType Name="LocationMaster">
+    <Key>
+      <PropertyRef Name="LocationMasterID" />
+    </Key>
+    <Property Name="LocationMasterID" Type="Int32" Nullable="false" />
+    <Property Name="LocationName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LocationDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="UpdatedTimestamp" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TestMasterMappings" Relationship="cBaseDevModel.FK_TestMasterMapping_LocationMaster" FromRole="LocationMaster" ToRole="TestMasterMapping" />
+  </EntityType>
+  <EntityType Name="PartMaster">
+    <Key>
+      <PropertyRef Name="PartMasterID" />
+    </Key>
+    <Property Name="PartMasterID" Type="Int32" Nullable="false" />
+    <Property Name="PartNumber" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PartDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="UpdatedTimestamp" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="TestMasterMappings" Relationship="cBaseDevModel.FK_TestMasterMapping_PartMaster" FromRole="PartMaster" ToRole="TestMasterMapping" />
+  </EntityType>
+  <EntityType Name="Component">
+    <Key>
+      <PropertyRef Name="ComponentID" />
+    </Key>
+    <Property Name="ComponentID" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ComponentName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ShortName" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="InputField">
+    <Key>
+      <PropertyRef Name="InputFieldID" />
+    </Key>
+    <Property Name="InputFieldID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TestInputID" Type="Int32" Nullable="false" />
+    <Property Name="FieldColumnName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FieldRowNo" Type="Int32" />
+    <Property Name="FieldName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentFieldValue" Type="Decimal" Precision="18" Scale="5" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="TestID" Type="Int32" />
+    <NavigationProperty Name="InputFieldsValues" Relationship="cBaseDevModel.FK_InputFields_InputFieldsValue" FromRole="InputField" ToRole="InputFieldsValue" />
+    <NavigationProperty Name="TestInput" Relationship="cBaseDevModel.FK_TestInputs_InputFields" FromRole="InputField" ToRole="TestInput" />
+  </EntityType>
+  <Association Name="FK_InputFields_InputFieldsValue">
+    <End Type="cBaseDevModel.InputField" Role="InputField" Multiplicity="1" />
+    <End Type="cBaseDevModel.InputFieldsValue" Role="InputFieldsValue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InputField">
+        <PropertyRef Name="InputFieldID" />
+      </Principal>
+      <Dependent Role="InputFieldsValue">
+        <PropertyRef Name="InputFieldID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestInputs_InputFields">
+    <End Type="cBaseDevModel.TestInput" Role="TestInput" Multiplicity="1" />
+    <End Type="cBaseDevModel.InputField" Role="InputField" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TestInput">
+        <PropertyRef Name="TestInputID" />
+      </Principal>
+      <Dependent Role="InputField">
+        <PropertyRef Name="TestInputID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Equation">
+    <Key>
+      <PropertyRef Name="EquationID" />
+    </Key>
+    <Property Name="EquationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TestID" Type="Int32" Nullable="false" />
+    <Property Name="EquationName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EquationString" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Condition" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Test" Relationship="cBaseDevModel.FK_Equations_Tests" FromRole="Equation" ToRole="Test" />
+  </EntityType>
+  <ComplexType Name="usp_GetTestMasterByTestId">
+    <Property Type="Int32" Name="TestMasterID" Nullable="false" />
+    <Property Type="String" Name="TestMasterName" Nullable="false" MaxLength="50" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="500" />
+    <Property Type="Boolean" Name="IsActive" Nullable="false" />
+    <Property Type="DateTime" Name="CreatedOn" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="CreatedBy" Nullable="false" />
+    <Property Type="DateTime" Name="ModifiedOn" Nullable="false" Precision="23" />
+    <Property Type="Int32" Name="ModifiedBy" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="AppParameter">
+    <Key>
+      <PropertyRef Name="AppParamID" />
+    </Key>
+    <Property Name="AppParamID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ParamName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ParamValue" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="MathConstant">
+    <Key>
+      <PropertyRef Name="ConstantID" />
+    </Key>
+    <Property Name="ConstantID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ConstantName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="Decimal" Precision="18" Scale="5" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="TestMasterMapping">
+    <Key>
+      <PropertyRef Name="TestMasterMapID" />
+    </Key>
+    <Property Name="TestMasterMapID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TestMasterID" Type="Int32" Nullable="false" />
+    <Property Name="PartMasterID" Type="Int32" Nullable="false" />
+    <Property Name="LocationMasterID" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="LocationMaster" Relationship="cBaseDevModel.FK_TestMasterMapping_LocationMaster" FromRole="TestMasterMapping" ToRole="LocationMaster" />
+    <NavigationProperty Name="PartMaster" Relationship="cBaseDevModel.FK_TestMasterMapping_PartMaster" FromRole="TestMasterMapping" ToRole="PartMaster" />
+    <NavigationProperty Name="TestMaster" Relationship="cBaseDevModel.FK_TestMasterMapping_TestMasterMapping" FromRole="TestMasterMapping" ToRole="TestMaster" />
+  </EntityType>
+  <Association Name="FK_TestMasterMapping_LocationMaster">
+    <End Type="cBaseDevModel.LocationMaster" Role="LocationMaster" Multiplicity="1" />
+    <End Type="cBaseDevModel.TestMasterMapping" Role="TestMasterMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LocationMaster">
+        <PropertyRef Name="LocationMasterID" />
+      </Principal>
+      <Dependent Role="TestMasterMapping">
+        <PropertyRef Name="LocationMasterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestMasterMapping_PartMaster">
+    <End Type="cBaseDevModel.PartMaster" Role="PartMaster" Multiplicity="1" />
+    <End Type="cBaseDevModel.TestMasterMapping" Role="TestMasterMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PartMaster">
+        <PropertyRef Name="PartMasterID" />
+      </Principal>
+      <Dependent Role="TestMasterMapping">
+        <PropertyRef Name="PartMasterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestMasterMapping_TestMasterMapping">
+    <End Type="cBaseDevModel.TestMaster" Role="TestMaster" Multiplicity="1" />
+    <End Type="cBaseDevModel.TestMasterMapping" Role="TestMasterMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TestMaster">
+        <PropertyRef Name="TestMasterID" />
+      </Principal>
+      <Dependent Role="TestMasterMapping">
+        <PropertyRef Name="TestMasterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="usp_GetLocationAndPartMapping">
+    <Property Type="Int32" Name="TestMasterMapID" Nullable="false" />
+    <Property Type="String" Name="LocationName" Nullable="false" MaxLength="100" />
+    <Property Type="String" Name="PartNumber" Nullable="false" MaxLength="100" />
+    <Property Type="Int32" Name="TestMasterID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="Test">
+    <Key>
+      <PropertyRef Name="TestID" />
+    </Key>
+    <Property Name="TestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TestMasterID" Type="Int32" Nullable="false" />
+    <Property Name="TestName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Descriptions" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Sequence" Type="Int32" Nullable="false" />
+    <Property Name="Expression" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="ModifiedOn" Type="DateTime" Precision="3" />
+    <Property Name="ModifiedBy" Type="Int32" />
+    <Property Name="IsExecuted" Type="Boolean" />
+    <Property Name="Result" Type="Boolean" />
+    <NavigationProperty Name="Equations" Relationship="cBaseDevModel.FK_Equations_Tests" FromRole="Test" ToRole="Equation" />
+    <NavigationProperty Name="PartAttributes" Relationship="cBaseDevModel.FK_PartAttributes_Tests" FromRole="Test" ToRole="PartAttribute" />
+    <NavigationProperty Name="TestAttributes" Relationship="cBaseDevModel.FK_TestAttributes_Tests" FromRole="Test" ToRole="TestAttribute" />
+    <NavigationProperty Name="TestCalculatedFields" Relationship="cBaseDevModel.FK_TestCalculatedFields_Tests" FromRole="Test" ToRole="TestCalculatedField" />
+    <NavigationProperty Name="TestInputs" Relationship="cBaseDevModel.FK_Test_TestInputs" FromRole="Test" ToRole="TestInput" />
+    <NavigationProperty Name="TestMaster" Relationship="cBaseDevModel.FK_TestMaster_Tests" FromRole="Test" ToRole="TestMaster" />
+  </EntityType>
+  <Association Name="FK_Equations_Tests">
+    <End Type="cBaseDevModel.Test" Role="Test" Multiplicity="1" />
+    <End Type="cBaseDevModel.Equation" Role="Equation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test">
+        <PropertyRef Name="TestID" />
+      </Principal>
+      <Dependent Role="Equation">
+        <PropertyRef Name="TestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PartAttributes_Tests">
+    <End Type="cBaseDevModel.Test" Role="Test" Multiplicity="1" />
+    <End Type="cBaseDevModel.PartAttribute" Role="PartAttribute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test">
+        <PropertyRef Name="TestID" />
+      </Principal>
+      <Dependent Role="PartAttribute">
+        <PropertyRef Name="TestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestAttributes_Tests">
+    <End Type="cBaseDevModel.Test" Role="Test" Multiplicity="1" />
+    <End Type="cBaseDevModel.TestAttribute" Role="TestAttribute" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test">
+        <PropertyRef Name="TestID" />
+      </Principal>
+      <Dependent Role="TestAttribute">
+        <PropertyRef Name="TestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestCalculatedFields_Tests">
+    <End Type="cBaseDevModel.Test" Role="Test" Multiplicity="1" />
+    <End Type="cBaseDevModel.TestCalculatedField" Role="TestCalculatedField" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test">
+        <PropertyRef Name="TestID" />
+      </Principal>
+      <Dependent Role="TestCalculatedField">
+        <PropertyRef Name="TestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Test_TestInputs">
+    <End Type="cBaseDevModel.Test" Role="Test" Multiplicity="1" />
+    <End Type="cBaseDevModel.TestInput" Role="TestInput" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Test">
+        <PropertyRef Name="TestID" />
+      </Principal>
+      <Dependent Role="TestInput">
+        <PropertyRef Name="TestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestMaster_Tests">
+    <End Type="cBaseDevModel.TestMaster" Role="TestMaster" Multiplicity="1" />
+    <End Type="cBaseDevModel.Test" Role="Test" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TestMaster">
+        <PropertyRef Name="TestMasterID" />
+      </Principal>
+      <Dependent Role="Test">
+        <PropertyRef Name="TestMasterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="vWLocationAttribute">
+    <Key>
+      <PropertyRef Name="LocAttrName" />
+      <PropertyRef Name="TestMasterID" />
+    </Key>
+    <Property Name="LocAttrName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Value" Type="Decimal" Precision="18" Scale="5" />
+    <Property Name="UOMID" Type="Int32" />
+    <Property Name="TestMasterID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ELMAH_Error">
+    <Key>
+      <PropertyRef Name="ErrorId" />
+      <PropertyRef Name="Application" />
+      <PropertyRef Name="Host" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Source" />
+      <PropertyRef Name="Message" />
+      <PropertyRef Name="User" />
+      <PropertyRef Name="StatusCode" />
+      <PropertyRef Name="TimeUtc" />
+      <PropertyRef Name="Sequence" />
+      <PropertyRef Name="AllXml" />
+    </Key>
+    <Property Name="ErrorId" Type="Guid" Nullable="false" />
+    <Property Name="Application" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="Host" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Source" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="Message" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="User" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StatusCode" Type="Int32" Nullable="false" />
+    <Property Name="TimeUtc" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Sequence" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AllXml" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,152 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script>
+    $(document).ready(function () {
+        $('.testmasters-menubar').css('display', 'block');
+        $('.test-menubar li, .testmasters-menubar li').removeClass('active-page');
+        $('.TestMaster, .Config').addClass('active-page');
+    });
+</script>
+<div class="test-master-subpage">
+    <div class="col-xs-12 tests-configuration">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="Configuration" class="tests-select control-label col-xs-2 col-sm-2 col-lg-2">Test Master:</label>
+                <div class="col-xs-6 col-sm-5 col-lg-4 padding-left-zero">
+                    <select class="form-control">
+                        <option>Test 1</option>
+                        <option>Test 2</option>
+                        <option>Test 3</option>
+                        <option>Test 4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Configuration" class="tests-select control-label col-xs-2 col-sm-2 col-lg-2 ">Test Name:</label>
+                <div class="col-xs-6 col-sm-5 col-lg-4 padding-left-zero">
+                    <select class="form-control">
+                        <option>Test 1</option>
+                        <option>Test 2</option>
+                        <option>Test 3</option>
+                        <option>Test 4</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group description-block">
+                <label for="Configuration" class="control-label col-xs-2 col-sm-2 col-lg-2 ">Description:</label>
+                <div class="col-xs-7 padding-left-zero">
+                    <input type="text" class="form-control" placeholder="*Testdescription, define purpose, expression, calculations, etc.">
+                </div>
+                <div class="col-xs-3 padding-all-zero text-right btn-sw-view">
+                    <div class="col-xs-0 col-lg-2 padding-right-zero"></div>
+                    <div class="col-xs-6 col-lg-5 padding-left-zero">
+                        <button type="submit" id="" title="Save" class="btn btn-default btn-block common-btn common-btn-animation create-btn">Save</button>
+                    </div>
+                    <div class="col-xs-6 col-lg-5 padding-left-zero">
+                        <button type="button" id="" title="Cancel" class="btn btn-primary btn-block common-btn common-btn-animation reset-btn">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Configuration" class="control-label col-xs-2 col-sm-2 col-lg-2">Attribute:</label>
+                <div class="col-xs-10 col-sm-10 col-lg-10 panel panel-default  padding-all-15px margin-all-zero">
+                    <div class="tableblock col-xs-6 col-sm-4 col-lg-4 padding-right-zero">
+                        <table class="table table-bordered table-striped cBase-custom-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>TEST ATTRIBUTES</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                                    <td>Colour Temperature</td>
+                                </tr>
+                                <tr>
+                                    <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                                    <td>Lamp Type</td>
+                                </tr>
+                                <tr>
+                                    <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                                    <td>Lamp Type</td>
+                                </tr>
+                                <tr>
+                                    <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                                    <td>Lamp Type</td>
+                                </tr>
+                                <tr>
+                                    <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                                    <td>Lamp Type</td>
+                                </tr>
+                                <tr>
+                                    <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                                    <td>Lamp Type</td>
+                                </tr>
+                                <tr>
+                                    <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                                    <td>Lamp Type</td>
+                                </tr>
+                                <tr>
+                                    <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                                    <td>Lamp Type</td>
+                                </tr>
+                                <tr>
+                                    <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                                    <td>Lamp Type</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-xs-6 col-sm-8 col-lg-8 margin-top-20x padding-left-zero">
+                        <div class="form-group attribute-input">
+                            <label for="Configuration" class="control-label col-xs-12 col-sm-4 col-lg-4">Attribute Name:</label>
+                            <div class="col-xs-12 col-sm-6 col-lg-6 padding-left-zero">
+                                <input type="text" class="form-control" placeholder="*Attribute Name">
+                            </div>
+                            <div class="col-xs-4 col-sm-2 padding-all-zero">
+                                <button type="button" id="" title="Rename" class="btn btn-default btn-block common-btn common-btn-animation submit-btn">Rename</button>
+                            </div>
+                        </div>
+                        <div class="col-xs-5 col-sm-4 col-md-3 col-lg-3 margin-top-20x attr-table-btn">
+                            <button type="button" title="Add" class="btn btn-primary btn-block common-btn common-btn-animation submit-btn margin-left-20x">Add</button>
+                            <button type="button" title="Delete" class="btn btn-default btn-block common-btn common-btn-animation reset-btn margin-left-20x">Delete</button>
+                            <div class="col-xs-10 col-sm-7 col-lg-6 margin-top-20x padding-left-zero direction-btn-cnfg">
+                                <button type="button" title="scroll-up" class="btn btn-primary btn-block common-btn common-btn-animation submit-btn"><span class="glyphicon glyphicon-circle-arrow-up"></span></button>
+                                <button type="button" title="scroll-down" class="btn btn-primary btn-block common-btn common-btn-animation reset-btn"><span class="glyphicon glyphicon-circle-arrow-down"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="Configuration" class="control-label col-xs-2 col-sm-2 col-lg-2">Expression:</label>
+                <div class="col-xs-8 col-sm-8 col-lg-8 panel panel-default  padding-all-15px exp-command-btn disable-state">
+                    @*Disbale class "disable-state" added here*@
+                <button type="button" id="" class="btn btn-default btn-inline">(</button>
+                <button type="button" id="" class="btn btn-default btn-inline">Color</button>
+                <button type="button" id="" class="btn btn-default btn-inline">&&</button>
+                <button type="button" id="" class="btn btn-default btn-inline">Color Correction</button>
+                <button type="button" id="" class="btn btn-default btn-inline">)</button>
+                <br>
+                <button type="button" id="" class="btn btn-default btn-inline">&&</button>
+                <button type="button" id="" class="btn btn-default btn-inline">Uniformity Min</button>
+                <button type="button" id="" class="btn btn-default btn-inline">&&</button>
+                <br>
+                <button type="button" id="" class="btn btn-default btn-inline">(</button>
+                <button type="button" id="" class="btn btn-default btn-inline">Uniformity Min</button>
+                <button type="button" id="" class="btn btn-default btn-inline">>=</button>
+                <button type="button" id="" class="btn btn-default btn-inline">Input</button>
+                <button type="button" id="" class="btn btn-default btn-inline">)</button>
+                <button type="button" id="" class="btn btn-default btn-inline">)</button>
+            </div>
+            <div class="col-xs-2 col-lg-2 text-right edit-exp-btn">
+                <button type="button" id="" title="Edit Expression" class="btn btn-default btn-inline common-btn common-btn-animation info-btn">Edit Expression</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+

@@ -1,0 +1,384 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script>
+    $(document).ready(function () {
+        $('.testmasters-menubar').css('display', 'block');
+        $('.test-menubar li, .testmaster-menubar li').removeClass('active-page');
+        $('.TestMaster, .Equ').addClass('active-page');
+    });
+</script>
+
+<div class="test-master-subpage equation">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="Configuration" class="tests-select control-label">Test Master:</label>
+            <div class="col-xs-7 col-sm-6 col-md-5">
+                <select class="form-control">
+                    <option>Test 1</option>
+                    <option>Test 2</option>
+                    <option>Test 3</option>
+                    <option>Test 4</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Configuration" class="tests-select control-label">Test Name:</label>
+            <div class="col-xs-7 col-sm-6 col-md-5">
+                <select class="form-control">
+                    <option>Test 1</option>
+                    <option>Test 2</option>
+                    <option>Test 3</option>
+                    <option>Test 4</option>
+                </select>
+            </div>
+            @*Hide below section when hit on evaluate *@
+            <div class="col-xs-3 col-lg-3 pull-right padding-right-zero" style="max-width:368px;">
+                <div class="col-xs-6 padding-left-zero">
+                    <button type="submit" id="" title="Save" class="btn btn-default btn-block common-btn common-btn-animation create-btn">Save</button>
+                </div>
+                <div class="col-xs-6 padding-left-zero">
+                    <button type="button" id="" title="Cancel" class="btn btn-default btn-block common-btn common-btn-animation reset-btn">Cancel</button>
+                </div>
+            </div>
+            @*Show below section when hit on evaluate *@
+            <div class="padding-left-zero col-xs-12 col-md-5 col-lg-6 equation-input-div" style="display:none">
+                <label for="Equation Name" class="control-label tests-select">Equation Name:</label>
+                <label for="Equation Name" class="control-label col-xs-4  col-md-6" style="text-align:left">Uniformity Min</label>
+                <button type="button" title="Equation" id="" class="btn btn-default btn-inline common-btn common-btn-animation info-btn">Equation</button>
+            </div>
+        </div>
+
+        @*Hide below section when hit on evaluate *@
+        <div class="col-xs-12 margin-top-30x padding-all-zero">
+            <div class="col-xs-11 col-md-3 padding-all-zero">
+                <div class="tableblock col-xs-12 padding-all-zero table-max-height">
+                    <table class="table table-bordered table-striped cBase-custom-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Equations</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked="checked"></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked="checked"></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="form-group text-right padding-all-15px">
+                    <button type="button" id="" title="Copy" data-toggle="modal" data-target="#copyEquation" class="btn btn-default btn-inline common-btn common-btn-animation submit-btn">Copy</button>
+                    <button type="button" id="" title="Delete" class="btn btn-default btn-inline common-btn common-btn-animation reset-btn">Delete</button>
+                </div>
+            </div>
+            <div class="col-md-9 form-horizontal">
+                <div class="direction-btn-cnfg direction-btn-position">
+                    <button type="button" title="scroll-up" class="btn btn-primary btn-block common-btn common-btn-animation submit-btn"><span class="glyphicon glyphicon-circle-arrow-up"></span></button>
+                    <button type="button" title="scroll-down" class="btn btn-primary btn-block common-btn common-btn-animation reset-btn"><span class="glyphicon glyphicon-circle-arrow-down"></span></button>
+                </div>
+                <div class="form-group InputName">
+                    <label for="Equation Name" class="control-label col-xs-2 text-right padding-left-zero">Equation Name:</label>
+                    <div class="col-xs-7 padding-all-zero">
+                        <input type="text" class="form-control" placeholder="*Equation Name">
+                    </div>
+                    <div class="col-xs-3 padding-all-zero btn-sw-view ">
+                        <div class="col-xs-6 padding-right-zero">
+                            <button type="button" id="" title="Rename" class="btn btn-default btn-block common-btn common-btn-animation submit-btn">Rename</button>
+                        </div>
+                        <div class="col-xs-6 padding-right-zero">
+                            <button type="button" id="" title="Create New" class="btn btn-default btn-block common-btn common-btn-animation create-btn">Create New</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group before-edit-exp">
+                    <label for="Description" class="control-label col-xs-2 text-right padding-left-zero">Description:</label>
+                    <div class="col-xs-10 padding-all-zero">
+                        <input type="text" class="form-control" placeholder="*Test description of functions.">
+                    </div>
+                </div>
+                <div class="form-group before-edit-exp margin-top-20x">
+                    <label for="Equation" class="control-label col-xs-2 text-right padding-left-zero">Equation:</label>
+                    <div class="col-xs-10 padding-all-zero ">
+                        <div class="panel panel-default equation-div">
+                            Test
+                        </div>
+                        <div class="col-xs-2 padding-left-zero">
+                            <select class="form-control">
+                                <option>Component</option>
+                                <option>Test 1</option>
+                                <option>Test 2</option>
+                                <option>Test 3</option>
+                                <option>Test 4</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-3 padding-left-zero">
+                            <select class="form-control">
+                                <option>Component Items</option>
+                                <option>Test 1</option>
+                                <option>Test 2</option>
+                                <option>Test 3</option>
+                                <option>Test 4</option>
+                            </select>
+                        </div>
+                        <button type="button" title="Add" class="btn btn-primary btn-inline common-btn common-btn-animation create-btn add-cmd-btn"><span class="glyphicon glyphicon-plus"></span> </button>
+                        <button type="button" title="Clear" class="btn btn-primary btn-inline common-btn common-btn-animation submit-btn reset-btn">clear</button>
+                        <button type="button" title="Evaluate" id="" class="btn btn-default btn-inline common-btn common-btn-animation info-btn pull-right">Evaluate</button>
+                    </div>
+                </div>
+                <div class="form-group margin-top-30x">
+                    <label for="Configuration" class="control-label col-xs-2 col-sm-2 col-lg-2">Condition:</label>
+                    <div class="col-xs-10 padding-all-zero">
+                        <div class="panel panel-default padding-all-15px exp-command-btn">
+                            <button type="button" id="" class="btn btn-default btn-inline">(</button>
+                            <button type="button" id="" class="btn btn-default btn-inline">Color</button>
+                            <button type="button" id="" class="btn btn-default btn-inline">&&</button>
+                            <button type="button" id="" class="btn btn-default btn-inline">Color Correction</button>
+                            <button type="button" id="" class="btn btn-default btn-inline">)</button>
+                        </div>
+                        <div class="col-xs-2 padding-left-zero">
+                            <select class="form-control">
+                                <option>Component</option>
+                                <option>Test 1</option>
+                                <option>Test 2</option>
+                                <option>Test 3</option>
+                                <option>Test 4</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-1 padding-left-zero">
+                            <select class="form-control">
+                                <option>Operator</option>
+                                <option>+</option>
+                                <option>-</option>
+                                <option>*</option>
+                                <option>%</option>
+                                <option>/</option>
+                                <option>|</option>
+                                <option>^</option>
+                                <option>!</option>
+                                <option>></option>
+                                <option><</option>
+                                <option>!=</option>
+                                <option>>=</option>
+                                <option>&&</option>
+                                <option>||</option>
+                                <option><=</option>
+                                <option>==</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-3 padding-left-zero">
+                            <select class="form-control">
+                                <option>Component Items</option>
+                                <option>Test 1</option>
+                                <option>Test 2</option>
+                                <option>Test 3</option>
+                                <option>Test 4</option>
+                            </select>
+                        </div>
+                        <button type="button" title="Add" class="btn btn-primary btn-inline common-btn common-btn-animation create-btn add-cmd-btn">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </button>
+                        <button type="button" title="Clear" class="btn btn-primary btn-inline common-btn common-btn-animation submit-btn reset-btn">clear</button>
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-primary btn-inline common-btn common-btn-animation info-btn">This</button>
+                            <button type="button" class="btn btn-primary btn-inline common-btn common-btn-animation info-btn">(</button>
+                            <button type="button" class="btn btn-primary btn-inline common-btn common-btn-animation info-btn">)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*Show below section when hit on evaluate *@
+        <div class="equ-input-div col-xs-12 padding-all-zero" style="display:none">
+            <div class="form-group col-xs-12 col-md-6 padding-all-zero ">
+                <label for="Equation" class="control-label tests-select text-right padding-left-zero" style="padding-right:15px;">Equation:</label>
+                <div class="col-xs-10 col-md-9 col-lg-10 padding-all-zero panel panel-default equation-div">
+                    Test
+                </div>
+            </div>
+            <div class="form-group col-xs-12 col-md-6 padding-all-zero pull-right">
+                <label for="Configuration" class="control-label tests-select" style="padding-right:15px;">Condition:</label>
+                <div class="col-xs-10 col-md-9 col-lg-10 padding-all-zero panel panel-default equation-div exp-command-btn">
+                    <button type="button" id="" class="btn btn-default btn-inline">(</button>
+                    <button type="button" id="" class="btn btn-default btn-inline">Color</button>
+                    <button type="button" id="" class="btn btn-default btn-inline">&&</button>
+                    <button type="button" id="" class="btn btn-default btn-inline">Color Correction</button>
+                    <button type="button" id="" class="btn btn-default btn-inline">)</button>
+                </div>
+            </div>
+            <div class="col-xs-12 padding-all-zero" style="padding-left:96px; clear:both;">
+                <div class="tableblock  inputTable col-xs-9 col-md-4 padding-all-zero">
+                    <table class="table table-bordered table-striped cBase-custom-table">
+                        <thead>
+                            <tr>
+                                <th>INPUT</th>
+                                <th>VALUE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>FLT-Input1</td>
+                                <td><input type="text" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td>FLT-Input2</td>
+                                <td><input type="text" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td>FLT-Input3</td>
+                                <td><input type="text" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td>FLT-Input4</td>
+                                <td><input type="text" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td>FLT-Input1</td>
+                                <td><input type="text" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td>FLT-Input1</td>
+                                <td><input type="text" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td>FLT-Input1</td>
+                                <td><input type="text" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td>FLT-Input1</td>
+                                <td><input type="text" value="" /></td>
+                            </tr>
+                            <tr>
+                                <td>FLT-Input1</td>
+                                <td><input type="text" value="" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-xs-3 col-md-2 cal-block">
+                    <button type="button" title="Test" class="btn btn-default btn-block common-btn common-btn-animation info-btn">Test</button>
+                    <button type="button" data-toggle="modal" title="Calculations" data-target="#CalculateResult" class="btn btn-default btn-block common-btn common-btn-animation info-btn">Calculations</button>
+                    <button type="button" id="" title="Clear" class="btn btn-default btn-block common-btn common-btn-animation info-btn">Clear</button>
+                </div>
+                <div class="col-xs-12 col-sm-12  col-md-6 panel panel-default calculated-result-block">
+                    Calculated Results are here...........
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="container">
+    <!-- Modal -->
+    <div class="modal fade popup-bck " id="copyEquation" role="dialog">
+        <div class="modal-dialog popup-content-box">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Copy Equation</h4>
+                </div>
+                <div class="modal-body coreModal-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="col-sm-5">Source Equation:</label>
+                        <label for="exampleInputEmail1" class="col-sm-7" style="text-align:left">Lasers Final</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" class="col-sm-5">Copy to Test Name:</label>
+                        <div class="col-sm-7">
+                            <select class="form-control">
+                                <option>Eclipse Uniformity</option>
+                                <option>Uniformity</option>
+                                <option>Uniformity</option>
+                                <option>Uniformity</option>
+                                <option>Min Uniformity</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1" class="col-sm-5">New Equation Name:</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="*New Equation Name">
+                        </div>
+                    </div>
+                    <div class="popupbtndiv col-sm-12">
+                        <button type="button" id="copyTestMaster" title="Copy" data-target="#SuccessMsg" class="btn btn-primary btn-inline common-btn common-btn-animation submit-btn popup-btn">Copy</button>
+                        <button type="button" id="cancelTestMaster" title="Cancel" data-dismiss="modal" class="btn btn-primary btn-inline common-btn common-btn-animation reset-btn popup-btn ">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

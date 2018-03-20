@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/cBaseQMS/Views/Shared/_Layout.cshtml";
+}
+<script>  
+    $(document).ready(function () {
+        $('.setting-menubar').css('display', 'block');
+         $('.setting-menubar li, .test-menubar > li').removeClass('active-page');
+         $('.AppSetting, .Setting').addClass('active-page');
+    });
+</script>
+<div class="Setting-page App-setting">
+    <div class="col-xs-5">
+        <div class="tableblock">
+            <table id="tblAppParamGrid" class="table table-bordered table-striped cBase-custom-table">
+            </table>
+            <div id="parampcinput" style="height: 100%"></div>
+        </div>
+    </div>
+   
+        <div class="col-xs-7 app-inputfield">
+            <div class="col-xs-3">
+                <button type="button" id="btnAppParamAdd" title="Add" class="btn btn-primary btn-block common-btn common-btn-animation submit-btn appsett-btn margin-bottom-20x">Add</button>
+                <button type="button" id="" title="Delete" class="btn btn-default btn-block common-btn common-btn-animation reset-btn appsett-btn">Delete</button>
+            </div>
+            <form class="col-xs-9 panel panel-default">
+                <div class="form-group">
+                    <label for="appName" class="col-xs-12 col-md-5 col-lg-4">Application Setting:</label>
+                    <input type="text" class="form-control col-xs-12 col-md-7 col-lg-8" id="appName" placeholder="*App Setting Name">
+                </div>
+                <div class="form-group">
+                    <label for="appValue" class="col-xs-12 col-md-5 col-lg-4">Value:</label>
+                    <input type="text" class="form-control col-xs-12 col-md-7 col-lg-8" id="appValue" placeholder="*Value">
+                </div>
+            </form>
+        </div>
+      
+</div>
+
+@section Scripts
+{
+    <script src="~/Areas/Scripts/AppParam.js"></script>
+}

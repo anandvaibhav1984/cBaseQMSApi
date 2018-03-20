@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/cBaseQMS/Views/Shared/_Layout.cshtml";
+}
+<script>
+    $(document).ready(function () {
+        $('.setting-menubar').css('display', 'block');
+        $('.setting-menubar li, .test-menubar > li').removeClass('active-page');
+        $('.QuickFind, .Setting').addClass('active-page');
+    });
+</script>
+<div class="Setting-page QuickFindNames">
+    <div class="col-xs-5">
+        <div class="tableblock">
+            <table class="table table-bordered table-striped cBase-custom-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th> QUICK FIND NAMES</th>                       
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" checked="checked" value="option1"></td>
+                        <td> Area m^2</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                        <td> Area m^2</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                        <td> Area m^2</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1"  value="option1"></td>
+                        <td> Area m^2</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                        <td> Area m^2</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                        <td> Area m^2</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                        <td> Area m^2</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1"  value="option1"></td>
+                        <td> Area m^2</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1"  value="option1"></td>
+                        <td> Area m^2</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1"  value="option1"></td>
+                        <td> Area m^2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="col-xs-7 app-inputfield">
+        <div class="col-xs-3">
+            <button type="button" title="Add" id="" class="btn btn-primary btn-block common-btn common-btn-animation submit-btn appsett-btn margin-bottom-20x">Add</button>
+            <button type="button" title="Delete" id="" class="btn btn-primary btn-block common-btn common-btn-animation reset-btn appsett-btn">Delete</button>
+        </div>
+        <form class="col-xs-9 panel panel-default">
+            <div class="form-group">
+                <label for="exampleInputEmail1" class="col-xs-12 col-md-5 col-lg-4">Quick Find Name:</label>
+                <input type="text" class="form-control col-xs-12 col-md-7 col-lg-8" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="*Element Name">
+            </div>
+        </form>
+    </div>
+</div>
+

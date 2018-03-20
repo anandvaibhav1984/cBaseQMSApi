@@ -1,0 +1,93 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/cBaseQMS/Views/Shared/_Layout.cshtml";
+}
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('.testmasters-menubar').css('display', 'block');// Test master child tests menubar open
+            $('.test-menubar li, .testmasters-menubar li').removeClass('active-page'); //Remove all previous active tab
+            $('.TestMaster, .Reports').addClass('active-page'); //Active Report Tab only
+        });
+    </script>
+}
+<div class="test-master-subpage reports-page form-horizontal">
+    <div class="form-group">
+        <label for="Test Master:" class="tests-select control-label">Test Master:</label>
+        <div class="col-xs-7 col-sm-6 col-md-5">
+            <select class="form-control">
+                <option>Test 1</option>
+                <option>Test 2</option>
+                <option>Test 3</option>
+                <option>Test 4</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="Test Name:" class="tests-select control-label">Test Name:</label>
+        <div class="col-xs-7 col-sm-6 col-md-5">
+            <select class="form-control">
+                <option>Test 1</option>
+                <option>Test 2</option>
+                <option>Test 3</option>
+                <option>Test 4</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-xs-5 col-md-5 margin-top-20x">
+        <label for="Product" class="col-xs-4 col-md-3 text-right control-label">Product:</label>
+        <div class="table-max-height col-xs-8 col-md-7 padding-all-zero">
+            <table class="table table-bordered table-striped cBase-custom-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Equations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <input type="checkbox" name="checkbtn" id="checkbox" value="" checked="checked"></td>
+                        <td>Area</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="checkbox" name="checkbtn" id="checkbox" value="" checked=""></td>
+                        <td>Area</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="checkbox" name="checkbtn" id="checkbox" value="" checked=""></td>
+                        <td>Area</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="checkbox" name="checkbtn" id="checkbox" value="" checked=""></td>
+                        <td>Area</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-xs-7 col-md-7 margin-top-20x padding-all-zero test-datepicker" style="min-height: 340px;">
+        <div class="form-group">
+            <label for="Output Format" class="col-xs-3 text-right control-label padding-left-zero">Output Format:</label>
+            <div class="radio-inline"><input type="radio" name="optradio" checked="checked"><b>CSV</b></div>
+            <div class="radio-inline"><input type="radio" name="optradio" checked=""><b>TXT</b></div>
+            <div class="radio-inline"><input type="radio" name="optradio" checked=""><b>XML</b></div>
+        </div>
+        <div class="form-group">
+            <label for="From Date" class="col-xs-3 text-right control-label padding-left-zero">From Date:</label>
+            <div class="col-xs-3 padding-all-zero margin-bottom-20x" id="fromDate" style="padding-right:30px;">
+                <input class="form-control" data-val="true" placeholder="yyyy-mm-dd" id="fromDateInput" name="date" type="text" />
+                <span class="glyphicon glyphicon-calendar datepicker-icon"></span>
+            </div>
+            <label for="To Date" class="col-xs-2 text-right control-label padding-left-zero" style="padding-right:15px;">To Date:</label>
+            <div class="col-xs-3 padding-all-zero margin-bottom-20x" id="toDate" style="padding-right:30px;">
+                <input class="form-control" data-val="true" placeholder="yyyy-mm-dd" id="toDateInput" name="date" type="text" />
+                <span class="glyphicon glyphicon-calendar datepicker-icon"></span>
+            </div>
+        </div>
+        <div class="col-xs-11">
+            <button type="button" title="Generate Report" class="btn btn-default btn-inline common-btn common-btn-animation info-btn pull-right">Generate Report</button>
+        </div>
+    </div>
+</div>

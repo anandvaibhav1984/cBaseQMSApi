@@ -1,0 +1,187 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@section scripts{
+    <script>
+    $(document).ready(function () {
+        $('.testmasters-menubar').css('display', 'block');// Test master child tests menubar open
+        $('.test-menubar li, .testmasters-menubar li').removeClass('active-page');//Remove all previous active tab
+        $('.TestMaster, .CalculatedFields').addClass('active-page');//Active Calculated field Tab only
+    });
+    </script>
+}
+<div class="test-master-subpage equation">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="Configuration" class="tests-select control-label">Test Master:</label>
+            <div class="col-xs-7 col-sm-6 col-md-5">
+                <select class="form-control">
+                    <option>Test 1</option>
+                    <option>Test 2</option>
+                    <option>Test 3</option>
+                    <option>Test 4</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="Configuration" class="tests-select control-label">Test Name:</label>
+            <div class="col-xs-7 col-sm-6 col-md-5">
+                <select class="form-control">
+                    <option>Test 1</option>
+                    <option>Test 2</option>
+                    <option>Test 3</option>
+                    <option>Test 4</option>
+                </select>
+            </div>
+        </div>
+        @*Hide below section when hit on evaluate *@
+        <div class="col-xs-12 margin-top-30x padding-all-zero">
+            <div class="col-xs-12 col-md-3 padding-all-zero">
+                <div class="tableblock col-xs-12 padding-all-zero table-max-height">
+                    <table class="table table-bordered table-striped cBase-custom-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Calculated Fields</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked="checked"></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked="checked"></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                            <tr>
+                                <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1" checked=""></td>
+                                <td>Area</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="form-group text-right padding-all-15px">
+                    <button type="button" id="" title="Copy" data-toggle="modal" data-target="#copyEquation" class="btn btn-default btn-inline common-btn common-btn-animation submit-btn">Copy</button>
+                    <button type="button" id="" title="Delete" class="btn btn-default btn-inline common-btn common-btn-animation reset-btn">Delete</button>
+                </div>
+            </div>
+            <div class="col-md-9 form-horizontal">
+                <div class="form-group InputName">
+                    <label for="Field Name" class="control-label col-xs-2 text-right padding-left-zero">Field Name:</label>
+                    <div class="col-xs-7 padding-all-zero">
+                        <input type="text" class="form-control" placeholder="*Field Name">
+                    </div>
+                    <div class="col-xs-3 padding-all-zero btn-sw-view ">
+                        <div class="col-xs-6 padding-right-zero">
+                            <button type="button" id="" title="Rename" class="btn btn-default btn-block common-btn common-btn-animation submit-btn">Rename</button>
+                        </div>
+                        <div class="col-xs-6 padding-right-zero">
+                            <button type="button" id="" title="Create New" class="btn btn-default btn-block common-btn common-btn-animation create-btn">Create New</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group before-edit-exp">
+                    <label for="Description" class="control-label col-xs-2 text-right padding-left-zero">Description:</label>
+                    <div class="col-xs-8 padding-all-zero">
+                        <input type="text" class="form-control" placeholder="*Test description of functions.">
+                    </div>
+                    <div class="col-xs-2 padding-right-zero pull-right" style="max-width:178px;">
+                        <button type="button" id="" title="Save" class="btn btn-default btn-block common-btn common-btn-animation create-btn pull-right">Save</button>
+                    </div>
+                </div>
+                <div class="form-group before-edit-exp margin-top-20x">
+                    <label for="Formula" class="control-label col-xs-2 text-right padding-left-zero">Formula:</label>
+                    <div class="col-xs-10 padding-all-zero ">
+                        <div class="panel panel-default equation-div">
+                            Test
+                        </div>
+                        <div class="col-xs-2 padding-left-zero">
+                            <select class="form-control">
+                                <option>Component</option>
+                                <option>Test 1</option>
+                                <option>Test 2</option>
+                                <option>Test 3</option>
+                                <option>Test 4</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-3 padding-left-zero">
+                            <select class="form-control">
+                                <option>Component Items</option>
+                                <option>Test 1</option>
+                                <option>Test 2</option>
+                                <option>Test 3</option>
+                                <option>Test 4</option>
+                            </select>
+                        </div>
+                        <button type="button" title="Add" class="btn btn-primary btn-inline common-btn common-btn-animation create-btn add-cmd-btn"><span class="glyphicon glyphicon-plus"></span> </button>
+                        <button type="button" title="Clear" class="btn btn-primary btn-inline common-btn common-btn-animation submit-btn reset-btn">clear</button>
+                        <button type="button" title="Evaluate" id="" class="btn btn-default btn-inline common-btn common-btn-animation info-btn pull-right">Evaluate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+

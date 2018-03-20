@@ -1,0 +1,182 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script>
+    $(document).ready(function () {
+        $('.test-menubar li').removeClass('active-page');
+        $('.LocationAttributes').addClass('active-page');
+    });
+</script>
+<div class="container-fluid location-attribute">
+    <div class="row">
+        <!-- top bar section code start here -->
+        <div class="col-xs-12">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-md-1 col-lg-2 tests-select control-label padding-right-zero">Location:</label>
+                    <div class="col-xs-5 col-md-5 col-lg-4">
+                        <select class="form-control">
+                            <option>Location Number: Location Name</option>
+                            <option>Location Name 1</option>
+                            <option>Location Name 2</option>
+                            <option>Location Name 3</option>
+                        </select>
+                    </div>
+                    <div class="check-inactive col-xs-5 col-lg-4">
+                        <input type="checkbox" name="showInactive" id="showInactive">
+                        <label class="check-inactive-label" for="showInactive"></label>
+                        <span>Show Inactive</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top bar section code start here -->
+        <!-- middle grid section code start here -->
+        <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+            <div class="tableblock">
+                <table class="table table-bordered table-striped cBase-custom-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>
+                                Attribute Names
+                            </th>
+                            <th>
+                                Value
+                            </th>
+                            <th>
+                                UOM
+                            </th>
+                            <th>
+                                Active
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                Test Screen Area
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                True
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                Test Screen Gain
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                True
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                Screen Size Diagonal
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                True
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                Screen Size Horizontal
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                True
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                Screen Size Vertical
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                True
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- middle grid section code end here -->
+        <!-- bottom form section code start here -->
+        <div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+            <div class="location-grey-bg col-xs-12">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-xs-2 control-label padding-right-zero text-right">Attributes Name:</label>
+                        <div class="col-xs-7 padding-right-zero">
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="col-xs-6  padding-left-zero">
+                                <button title="Rename" class="btn btn-default common-btn btn-block common-btn-animation submit-btn rename-btn">Rename</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Tests" class="col-xs-2 control-label padding-right-zero text-right">Value:</label>
+                        <div class="col-xs-3 ">
+                            <input type="text" class="form-control">
+                        </div>
+                        <label for="Tests" class="col-xs-1 tests-select control-label padding-right-zero text-right">UOM:</label>
+                        <div class="col-xs-3 padding-right-zero">
+                            <select class="form-control">
+                                <option>Options</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Tests" class="col-xs-2 control-label padding-right-zero text-right">Active:</label>
+                        <div class="col-xs-7 padding-right-zero">
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> True
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> False
+                            </label>
+                        </div>
+                        <div class="col-xs-3">
+                            <div class="col-xs-6  padding-left-zero">
+                                <button type="button" title="Add" class="btn btn-default btn-block common-btn common-btn-animation submit-btn">Add</button>
+                            </div>
+                            <div class="col-xs-6  padding-left-zero">
+                                <button type="button" title="Delete" class="btn btn-default btn-block common-btn common-btn-animation reset-btn">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- bottom form section code start here -->
+        </div>
+    </div>
+</div>
+

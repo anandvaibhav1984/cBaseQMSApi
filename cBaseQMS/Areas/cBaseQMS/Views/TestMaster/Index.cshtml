@@ -1,0 +1,136 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<div class="container-fluid test-master-page">
+    <div class="row">
+
+        <!-- left panel code start here -->
+        <form class="form-horizontal col-xs-12" style="margin-bottom:25px">
+            <div class="form-group">
+                <label for="Tests" class="control-label tests-select">Find Masters for Test:</label>
+                <div class="col-xs-9 col-sw-7 col-md-6 col-lg-5">
+                    <select id="ddlTest" class="form-control "></select>
+                </div>
+            </div>
+        </form>
+        <div class="col-xs-4 col-md-3 col-lg-4">
+            <div class="table-max-height tableblock">
+                <table id="tblTestMasterLists" class="table table-bordered"></table>
+            </div>
+
+            <div class="col-xs-12 padding-all-zero text-right panel panel-default btn-sm-align right-panel-bottom-wrapper">
+                <button type="button" id="btnCopy" class="btn btn-primary btn-inline common-btn common-btn-animation submit-btn" data-toggle="modal" title="copy" data-target="#TestMasterCopyModal">Copy</button>
+                <button type="button" id="btnDelete" onclick="DeleteTestMaster(this.title)" title="Delete" class="btn btn-default btn-inline common-btn common-btn-animation reset-btn">Delete</button>
+                <button type="button" id="btnManage" onclick="ManageTestMaster()" title="Manage" 
+                        class="btn btn-default btn-inline common-btn common-btn-animation reset-btn">Manage</button>
+                @*<div type="submit" title="Manage" id="idManage" class="btn btn-default btn-inline common-btn common-btn-animation manage-btn info-btn">
+                    @Html.ActionLink("Manage", "Index", "Tests", new { Area = "cBaseQMS" }, null)
+                </div>*@
+            </div>
+        </div>
+        <!-- left panel code end here -->
+        <!-- right panel code start here -->
+        <div class="col-xs-8 col-md-9 col-lg-8">
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <label for="testmastername" class="col-xs-12 col-md-2 control-label master-name-txt padding-all-zero text-right xs-testmaster-label">Test Master Name:</label>
+                    <div class="col-xs-8 col-md-6">
+                        <input type="text" class="form-control" id="testMasterName" placeholder="Lasers Final">
+                    </div>
+                    <div class="col-xs-2 padding-left-zero">
+                        <button type="button" id="btnRename" title="Rename" class="btn btn-default btn-block common-btn common-btn-animation submit-btn">Rename</button>
+                    </div>
+                    <div class="col-xs-2  padding-left-zero">
+                        <button type="button" onclick="CreateTestMaster()" id="btnCreateTestMaster" title="Create" class="btn btn-default btn-block common-btn common-btn-animation create-btn">Create</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="description" class="col-xs-12 col-md-2  control-label padding-all-zero text-right xs-testmaster-label">Description:</label>
+                    <div class="col-xs-10 col-md-8">
+                        <input type="text" class="form-control" id="testMasterDesc" placeholder="Test Master description of tests executed.">
+                    </div>
+                    <div class="col-xs-2 padding-left-zero">
+                        <button type="button" id="btnSave" title="Save" onclick="RenameTestMaster(this.title)" class="btn btn-default btn-block common-btn common-btn-animation create-btn">Save</button>
+                    </div>
+                </div>
+            </form>
+            <form class="form-horizontal panel panel-default right-panel-bottom-wrapper">
+                <div class="form-group">
+                    <label for="testmastername" class="col-sm-2 control-label padding-right-zero tests-select xs-testmaster-label">Location:</label>
+                    <div class="col-xs-7">
+                        <select id="ddlLocationMaster" class="form-control"></select>
+                    </div>
+                    <div class="col-xs-3 padding-left-zero">
+                        <button type="button" id="btnlocationAttr" title="Location Attributes" class="btn btn-default btn-block common-btn common-btn-animation info-btn">Location Attributes</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="description" class="col-sm-2 control-label  padding-right-zero tests-select xs-testmaster-label">Part No.:</label>
+                    <div class="col-xs-7 ">
+                        <select id="ddlPartMaster" class="form-control"></select>
+                    </div>
+                    <div class="col-xs-3 padding-left-zero">
+                        <button type="button" title="Part Attributes" id="btnPartAttribute" class="btn btn-default btn-block common-btn common-btn-animation info-btn">Part Attributes</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <button type="button" id="btnPartAndLocation" title="Add" onclick="SavePartAndLocation()" class="btn btn-default common-btn common-btn-animation submit-btn">Add</button>
+                        <button type="button" id="btnremovePartAndLocation" onclick="RemovePartAndLocation()" title="Remove" class="btn btn-default common-btn common-btn-animation reset-btn">Remove</button>
+                    </div>
+                </div>
+                <div class="table-max-height location-list tableblock">
+                    <table id="tblLocationNPart" class="table table-bordered cBase-custom-table"></table>
+                </div>
+            </form>
+        </div>
+        <!-- right panel code end here -->
+        <div style="color:red;" id="msg_id"></div>
+    </div>
+</div>
+
+
+<!-- Popup Modal start here by pushplata -->
+<div class="container">
+    <!-- Modal -->
+    <div class="modal fade popup-bck " id="TestMasterCopyModal" role="dialog">
+        <div class="modal-dialog popup-content-box">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Copy Test Master</h4>
+                </div>
+                <div class="modal-body coreModal-body">
+                    <form class="">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="col-sm-5">Source Test Master:</label>
+                            <label for="exampleInputEmail1" class="col-sm-7" style="text-align:left">Lasers Final</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" class="col-sm-5">New Test Master:</label>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="*New Test Master Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="popupbtndiv col-sm-12">
+                                <button type="button" id="copyTestMaster" title="Copy" data-target="#SuccessMsg" class="btn btn-primary btn-inline common-btn common-btn-animation submit-btn popup-btn">Copy</button>
+                                <button type="button" id="cancelTestMaster" title="Cancel" data-dismiss="modal" class="btn btn-primary btn-inline common-btn common-btn-animation reset-btn popup-btn ">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Popup Modal ended here -->
+@section Scripts
+{
+    <script src="~/Areas/Scripts/TestMaster.js"></script>
+    <script src="~/Areas/Scripts/Helpers.js"></script>
+
+}

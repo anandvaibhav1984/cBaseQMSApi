@@ -1,0 +1,91 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cBaseQMS", "cBaseQms\cBaseQMS.csproj", "{A068EAE8-1FBF-4293-961D-4D4907DDEB0B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3375C0A8-F7BC-4C4A-A4C3-E9C468552237} = {3375C0A8-F7BC-4C4A-A4C3-E9C468552237}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cBaseQMS.DAL", "cBaseQms.DAL\cBaseQMS.DAL.csproj", "{7254070B-56AB-4E75-A84B-09398AA38749}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cBaseQMS.Repository", "cBaseQms.Repository\cBaseQMS.Repository.csproj", "{963B3523-8C0A-43AE-B2BF-FB1B9D733149}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cBaseQMS.Service", "cBaseQms.Service\cBaseQMS.Service.csproj", "{1A5D0F0A-BC5E-4F02-90BD-049FA7962ED4}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "cBaseQMS.Database", "cBaseQMS.Database\cBaseQMS.Database.sqlproj", "{DCE1F118-14E4-433A-8C33-5D54EEAA3C2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cBaseQMS.ResolveDependency", "cBaseQMS.ResolveDependency\cBaseQMS.ResolveDependency.csproj", "{AD1CC510-C100-406A-98F0-3AA013D12CF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cBaseQMS.Api", "cBaseQMS.Api\cBaseQMS.Api.csproj", "{3375C0A8-F7BC-4C4A-A4C3-E9C468552237}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A068EAE8-1FBF-4293-961D-4D4907DDEB0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A068EAE8-1FBF-4293-961D-4D4907DDEB0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A068EAE8-1FBF-4293-961D-4D4907DDEB0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A068EAE8-1FBF-4293-961D-4D4907DDEB0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7254070B-56AB-4E75-A84B-09398AA38749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7254070B-56AB-4E75-A84B-09398AA38749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7254070B-56AB-4E75-A84B-09398AA38749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7254070B-56AB-4E75-A84B-09398AA38749}.Release|Any CPU.Build.0 = Release|Any CPU
+		{963B3523-8C0A-43AE-B2BF-FB1B9D733149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{963B3523-8C0A-43AE-B2BF-FB1B9D733149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{963B3523-8C0A-43AE-B2BF-FB1B9D733149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{963B3523-8C0A-43AE-B2BF-FB1B9D733149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A5D0F0A-BC5E-4F02-90BD-049FA7962ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A5D0F0A-BC5E-4F02-90BD-049FA7962ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A5D0F0A-BC5E-4F02-90BD-049FA7962ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A5D0F0A-BC5E-4F02-90BD-049FA7962ED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCE1F118-14E4-433A-8C33-5D54EEAA3C2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCE1F118-14E4-433A-8C33-5D54EEAA3C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCE1F118-14E4-433A-8C33-5D54EEAA3C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCE1F118-14E4-433A-8C33-5D54EEAA3C2A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AD1CC510-C100-406A-98F0-3AA013D12CF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD1CC510-C100-406A-98F0-3AA013D12CF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD1CC510-C100-406A-98F0-3AA013D12CF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD1CC510-C100-406A-98F0-3AA013D12CF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3375C0A8-F7BC-4C4A-A4C3-E9C468552237}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3375C0A8-F7BC-4C4A-A4C3-E9C468552237}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3375C0A8-F7BC-4C4A-A4C3-E9C468552237}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3375C0A8-F7BC-4C4A-A4C3-E9C468552237}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E72EAAC-7096-4FCC-BCB4-27944DD8BED0}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://rsin-pw-tfs:8080/tfs/mpick
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = cBaseQms.DAL\\cBaseQMS.DAL.csproj
+		SccProjectName1 = cBaseQms.DAL
+		SccLocalPath1 = cBaseQms.DAL
+		SccProjectUniqueName2 = cBaseQms.Repository\\cBaseQMS.Repository.csproj
+		SccProjectName2 = cBaseQms.Repository
+		SccLocalPath2 = cBaseQms.Repository
+		SccProjectUniqueName3 = cBaseQms.Service\\cBaseQMS.Service.csproj
+		SccProjectName3 = cBaseQms.Service
+		SccLocalPath3 = cBaseQms.Service
+		SccProjectUniqueName4 = cBaseQms\\cBaseQMS.csproj
+		SccProjectName4 = cBaseQms
+		SccLocalPath4 = cBaseQms
+		SccProjectUniqueName5 = cBaseQMS.Database\\cBaseQMS.Database.sqlproj
+		SccProjectName5 = cBaseQMS.Database
+		SccLocalPath5 = cBaseQMS.Database
+		SccProjectUniqueName6 = cBaseQMS.ResolveDependency\\cBaseQMS.ResolveDependency.csproj
+		SccProjectName6 = cBaseQMS.ResolveDependency
+		SccLocalPath6 = cBaseQMS.ResolveDependency
+		SccProjectUniqueName7 = cBaseQMS.Api\\cBaseQMS.Api.csproj
+		SccProjectName7 = cBaseQMS.Api
+		SccLocalPath7 = cBaseQMS.Api
+	EndGlobalSection
+EndGlobal

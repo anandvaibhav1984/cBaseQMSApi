@@ -1,0 +1,24 @@
+﻿[
+  {
+    "error_msg": [
+      {
+        "View": [
+          {
+            "TestMasterMappingViewModel": [
+              {
+                "operation": [
+                  {
+                    "Insert": "Test Master  has been inserted succesfully",
+                    "update": "Test Master  Update Successfully",
+                    "Delete": "Test Master   removed successfully"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+
+    ]
+  }
+]

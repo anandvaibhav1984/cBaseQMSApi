@@ -1,0 +1,279 @@
+﻿/*media start here*/
+@media (max-width:1496px) {
+    /*.app-inputfield > form{
+        max-width: 92%;
+    }*/
+}
+
+@media (max-width:1199px) {
+    /*Common css*/
+    .main-header li {
+        padding-left: 1.52%;
+        padding-right: 1.52%;
+        font-size: 20px;
+    }
+
+    li.logo, li.logo:hover {
+        font-size: 40px;
+    }
+
+    .btn-sw-view button {
+        padding: 6px 2px;
+    }
+    /*comman css ended here*/
+
+    /*Application Setting page media*/
+    .app-inputfield form input {
+        width: 53%;
+    }
+    /*Application Setting page media*/
+
+    /*TestMaster screen media starts here*/
+    .btn-sm-align button,.btn-sm-align div.info-btn  {
+        padding: 6px 4.2%;
+    }
+ 
+    /*TestMaster screen media ended here*/
+
+    /*ConstantsAndMath screen media starts here*/
+    .sections{
+        width:49%
+    }
+
+    .tests-configuration {
+        padding-right: 3%;
+    }
+    /*ConstantsAndMath screen media ended here*/
+
+    /* part attribute page css start here */
+    .part-attribute-title {
+        text-align: left !important;
+        margin-bottom: 15px !important;
+    }
+
+    .part-attribute-txtfld {
+        margin-bottom: 15px !important;
+    }
+
+    .label-full-width.form-horizontal .control-label {
+        text-align: left;
+        padding-left: 15px;
+        margin-bottom: 5px;
+    }
+
+    .part-btn-spacing {
+        margin-top: 15px;
+        padding-left: 15px;
+    }
+    /* part attribute page css end here */
+       .equ-input-div .cal-block{
+        padding-right: 5%;
+    }
+      .equation-input-div button{
+          right:-7%
+      }
+}
+
+@media (max-width:991px) {
+    /*Common css*/
+    .main-header li,
+    li.logo:hover {
+        padding-left: 1%;
+        padding-right: 1%;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    li.logo, li.logo:hover {
+        font-size: 40px;
+    }
+
+    li.acc-btn > div {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    /*comman css ended here*/
+
+    /*Application Setting page media*/
+    .app-inputfield .appsett-btn,
+    .popup-btn {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .app-inputfield form label {
+        text-align: left;
+        padding: 0px;
+        line-height: 20px;
+    }
+
+    .Setting-page .app-inputfield > div {
+        margin-top: 48px;
+    }
+
+    .app-inputfield form input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .app-inputfield > form {
+        padding: 20px 20px 10px;
+    }
+
+    .QuickFindNames .app-inputfield > form {
+        margin-top: 36px;
+    }
+    /*Application Setting page media*/
+
+    /* Test Master page css start here */
+    .test-master-title {
+        text-align: left !important;
+        margin-bottom: 15px !important;
+    }
+
+    .test-master-txtfld {
+        margin-bottom: 15px !important;
+    }
+
+    .xs-testmaster-label {
+        text-align: left !important;
+        padding-left: 15px;
+        margin-bottom: 5px;
+    }
+       .table-max-height.location-list{
+        max-height:438px;
+    }
+    /* Test Master page css end here */
+
+    /* part attribute page css start here */
+    .attriubute-grid-bg {
+        margin-top: 0;
+    }
+
+    .label-full-width.form-horizontal .control-label {
+        text-align: right;
+        padding-left: 0px;
+        margin-bottom: 0px;
+        font-size: 13.6px;
+    }
+
+    .part-btn-spacing {
+        margin-top: 0px;
+        padding-left: 0px;
+    }
+    /* part attribute page css end here */
+
+    /*Configuration screen media starts here*/
+    .action-panel > div > div {
+        padding: 3px 15px 2px 0px;
+    }
+
+        .action-panel > div > div:nth-child(4),
+        .action-panel > div > div:first-child {
+            padding: 3px 15px 2px 15px;
+        }
+
+    .tests-configuration .common-btn.popup-btn {
+        min-width: 59px;
+    }
+
+    .btn-sw-view div {
+        max-width: 110px;
+        padding: 0px 0px 0px 10px;
+    }
+
+    .btn-sw-view button, .edit-exp-btn button, .cal-block button {
+        padding: 6px 2px;
+    }
+
+    .edit-exp-btn {
+        padding-right: 0px;
+    }
+    /*Configuration screen media ended here*/
+
+    /**Input field screen media starts here*/
+    .calculated-result-block {
+        margin-top: 10px;
+    }
+
+    .input-fields-page .InputName .btn-sw-view{
+        margin-left: 34.33333333333333%;
+        margin-top: 5px;
+    }
+
+    .input-fields-page .direction-btn-cnfg{
+        padding-right: 0px;
+    }
+    /**Input field screen media ended here*/
+
+    /*Location attribute screen media starts here*/
+    .location-attribute .check-inactive {
+        float: right;
+    }
+    /**Input field screen media ended here*/
+    /*Equation media starts here*/
+    .equation .table-max-height{
+        max-height:320px;
+    }
+    .equation .direction-btn-cnfg{
+        padding-right: 0px;
+        right: -16px;
+        margin-top: 126px;
+    }
+    .equation-input-div{
+        margin-top:15px;
+        float:left
+    }
+    .equation-input-div .tests-select{
+        width: 117px;
+    }
+      .equation-input-div button{
+          right:15px;
+      }
+    .btn-evaluate {
+        padding:6px 8px;
+    }
+    .sections{
+        width:100%
+    }
+    .tests-action-panel label {
+    text-align:left;
+         }
+}
+
+@media (max-width:767px) {
+    /*Common css*/
+    .coreModal-body > form > .form-group > label {
+        text-align: left;
+    }
+    /*Common css ended here*/
+
+    /*Test Master > Tests screen media starts here*/
+    .test-action-blk > button {
+        margin-right: 3%;
+    } 
+
+    .popupbtndiv {
+        text-align: left;
+        margin-top: 10px;
+    }/*Test Master > Tests screen media starts here*/
+
+     /*Configuration screen media starts here*/
+    .description-block > div {
+        padding: 0px;
+    }
+
+        .description-block > div:first-child {
+            padding-right: 0px;
+        }
+    /*Configuration screen media ended here*/
+    .attribute-input {
+        padding-left: 30px;
+    }
+
+        .attribute-input > div:nth-child(2),
+        .attribute-input .control-label {
+            margin-bottom: 10px;
+            padding-left: 0px;
+        }
+}

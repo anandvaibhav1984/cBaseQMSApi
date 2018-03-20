@@ -1,0 +1,139 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/cBaseQMS/Views/Shared/_Layout.cshtml";
+}
+<script>
+    $(document).ready(function () {
+        $('.setting-menubar').css('display', 'block');
+        $('.setting-menubar li, .test-menubar > li').removeClass('active-page');
+        $('.convMathConstants, .Setting').addClass('active-page');
+    });
+</script>
+<div class="Setting-page MathConstants col-xs-12">
+    <div class="panel panel-default sections" style="margin-right:15px;">
+        <label class="legend-heading">Conversion & Math Constants</label>
+        <div class="tableblock col-xs-7 padding-all-zero">
+            <table class="table table-bordered table-striped cBase-custom-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th> Constant Names</th>
+                        <th> Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" checked="checked" value="option1"></td>
+                        <td> Sqft2sqm</td>
+                        <td>0.0945342</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                        <td> Sqft2sqm</td>
+                        <td>0.0945342</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                        <td> Sqft2sqm</td>
+                        <td>0.0945342</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                        <td> Test</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                        <td> Sqft2sqm</td>
+                        <td>0.0945342</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                        <td> Test</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                        <td> Test</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-5 padding-right-zero">
+            <div class="form-group">
+                <label for="exampleInputEmail1" class="control-label">Constants name:</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="*Constants Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1" class="control-label">Value:</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="*Value">
+            </div>
+            <button type="button" title="Add" id="" class="btn btn-primary btn-inline common-btn common-btn-animation submit-btn appsett-btn ">Add</button>
+            <button type="button" title="Delete" id="" class="btn btn-primary btn-inline common-btn common-btn-animation reset-btn">Delete</button>
+        </div>
+    </div>
+    <div class="panel panel-default sections">
+        <label class="legend-heading">Units of Measurement</label>
+        <div class="tableblock col-xs-7 padding-all-zero">
+            <table class="table table-bordered table-striped cBase-custom-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th> UOM Names</th>
+                        <th> Abbreviation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" checked="checked" value="option1"></td>
+                        <td> Sqft2sqm</td>
+                        <td>0.0945342</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                        <td> Sqft2sqm</td>
+                        <td>0.0945342</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                        <td> Sqft2sqm</td>
+                        <td>0.0945342</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                        <td> Test</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                        <td> Sqft2sqm</td>
+                        <td>0.0945342</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                        <td> Test</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td> <input type="radio" name="blankRadio" id="blankRadio1" value="option1"></td>
+                        <td> Sqft2sqm</td>
+                        <td>0.0945342</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-xs-5 padding-right-zero">
+            <div class="form-group">
+                <label for="exampleInputEmail1" class="control-label">UOM name:</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="*UOM name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1" class="control-label">Abbreviation:</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="*Abbreviation">
+            </div>
+            <button type="button" title="Add" id="" class="btn btn-primary btn-inline common-btn common-btn-animation submit-btn appsett-btn ">Add</button>
+            <button type="button" title="Delete" id="" class="btn btn-primary btn-inline common-btn common-btn-animation reset-btn">Delete</button>
+        </div>
+    </div>
+</div>

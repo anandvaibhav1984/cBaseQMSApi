@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+
+}
+@section scripts{
+
+    <script>
+        var testMasterid= @ViewBag.testMasterid;
+    </script>
+    <script src="~/Areas/Scripts/Test.js"></script>
+    <script src="~/Areas/Scripts/Helpers.js"></script>
+
+}
+<div class="test-master-subpage tests-page">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="Tests" class="tests-select control-label">Test Master:</label>
+            <div class="col-xs-7">
+                <select id="ddlTestMaster" class="form-control"></select>
+            </div>
+            <div class="check-inactive">
+                <input type="checkbox" id="chkActive" name="showInactive" >
+                <label class="check-inactive-label" for="chkActive"></label>
+                <span>Show Inactive</span>
+            </div>
+        </div>
+    </form>
+    <div class="tableblock">
+        <table id="tblTestLists" class="table table-bordered">
+            
+        </table>
+    </div>
+    <div class="direction-btn-cnfg">
+        <button type="button" title="scroll-up" id="btnUp" onclick="Move('UP')" class="btn btn-primary btn-block common-btn common-btn-animation submit-btn"><span class="glyphicon glyphicon-circle-arrow-up"></span></button>
+        <button type="button" title="scroll-down" onclick="Move('DW')" id="btnDown"class="btn btn-primary btn-block common-btn common-btn-animation reset-btn"><span class="glyphicon glyphicon-circle-arrow-down"></span></button>
+    </div>
+    <div class="tests-action-panel panel panel-default margin-top-20x">
+        <div class="col-xs-3 col-md-2 test-action-blk padding-right-zero">
+            <button type="button" id="btnConfiguration" title="Test Configuration" class="btn btn-default btn-block common-btn common-btn-animation submit-btn">Test Configuration</button>
+            <button type="button" id="btnCreateTemplate" title="Create Template" class="btn btn-default btn-block common-btn common-btn-animation submit-btn" data-toggle="modal" data-target="#CreateTestTemplate">Create Template</button>
+            <button type="button"id="btnInactivate" onclick="btnActivateTests(this.title)" title="Inactivate Test" class="btn btn-default btn-block common-btn common-btn-animation submit-btn">Inactivate Test</button>
+        </div>
+        <div class="col-xs-9 col-md-10 padding-all-zero">
+            <div class="col-xs-6 col-md-8 padding-all-zero">
+                <label for="exampleInputName" class="col-xs-12 col-md-5 control-label padding-right-zero">Constants name:</label>
+                <div class="col-xs-12 col-md-7"><input type="text" class="form-control" id="testInputName" aria-describedby="nameHelp" placeholder="Existing or New Test Name"></div>
+                <label for="Tests" class="col-xs-12 col-md-5 control-label padding-right-zero">Copy/Move To:</label>
+                <div class="col-xs-12 col-md-7 ">
+                    <select id="ddlCopyTo" class="form-control">
+                      
+                    </select>
+                </div>
+                <button type="button" id="btnRemoveFromMaster" onclick="btnRemoveFromMaster()" title="Remove From Master" class="btn btn-default btn-inline common-btn common-btn-animation submit-btn pull-right" style="margin-right:15px;">Remove From Master</button>
+            </div>
+            <div class="col-xs-3 col-md-2 padding-left-zero">
+                <button type="button" id="btnRename" title="Rename" onclick="RenameTestMaster(this.title)" class="btn btn-default btn-block common-btn common-btn-animation submit-btn"> Rename</button>
+                <button type="button" id="btnCopyTest"  onclick="CreateCopyTest(this.title)" title="Copy Test" class="btn btn-default btn-block common-btn common-btn-animation submit-btn">Copy Test</button>
+                <button type="button" onclick="btnCancel()" id="btnCancel" title="Cancel" class="btn btn-default btn-block common-btn common-btn-animation submit-btn">Cancel</button>
+            </div>
+            <div class="col-xs-3 col-md-2 padding-left-zero">
+                <button type="button" id="btnNewTest" onclick="CreateCopyTest(this.title)" title="Create New" class="btn btn-default btn-block common-btn common-btn-animation create-btn">Create New</button>
+                <button type="button" id="btnMove" title="Move test" onclick="MoveTest(this.title)" class="btn btn-default btn-block common-btn common-btn-animation submit-btn">Move Test</button>
+                <button type="button" id="btnDelete"  title="Delete Test" onclick="RenameTestMaster(this.title)" class="btn btn-default btn-block common-btn common-btn-animation submit-btn">Delete Test</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Popup Modal start here  -->
+<div class="container">
+    <!-- Modal -->
+    <div class="modal fade popup-bck " id="CreateTestTemplate" role="dialog">
+        <div class="modal-dialog popup-content-box">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Create Test Template</h4>
+                </div>
+                <div class="modal-body coreModal-body">
+                    <form class="">
+                        <div class="form-group radio-btn-row">
+                            <label for="fileFormate" class="col-xs-4 padding-right-zero">File Formate:</label>
+                            <div class="col-xs-7 col-sm-7">
+                                <div class="radio-inline">
+                                    <label><input type="radio" name="optradio" checked="checked"><span>JSON</span></label>
+                                </div>
+                                <div class="radio-inline">
+                                    <label><input type="radio" name="optradio"><span>XML</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" class="col-sm-4 padding-right-zero">File Name:</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" placeholder="*Test File Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="popupbtndiv col-sm-12">
+                                <button type="submit" id="" title="Create Template" data-target="#SuccessMsg" class="btn btn-primary btn-inline common-btn common-btn-animation submit-btn popup-btn">Create Template</button>
+                                <button type="submit" id="" title="Cancel" data-dismiss="modal" class="btn btn-primary btn-inline common-btn common-btn-animation reset-btn popup-btn ">Cancel</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Popup Modal ended here -->

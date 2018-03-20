@@ -1,0 +1,1168 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    min-width: 750px;
+    font: normal 14px "Roboto", sans-serif;
+    padding-top: 0px !important;
+}
+
+.body-content select {
+    height: 34px;
+    line-height: 30px;
+    padding-left: 5px;
+    .coreModal-body label;
+}
+
+.body-content option {
+    height: 34px;
+}
+
+body.modal-open {
+    margin-right: 0px;
+    padding-right: 0px;
+}
+
+ul, li {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Generic class definitions*/
+.margin-all-zero {
+    margin: 0px;
+}
+
+.margin-bottom-20x {
+    margin-bottom: 20px;
+}
+
+.margin-top-20x {
+    margin-top: 20px;
+}
+
+.margin-top-30x {
+    margin-top: 30px;
+}
+
+.margin-left-20x {
+    margin-left: 20px;
+}
+
+.padding-left-zero {
+    padding-left: 0px;
+}
+
+.padding-right-zero {
+    padding-right: 0px;
+}
+
+.padding-all-zero {
+    padding: 0px;
+}
+
+.padding-right-1x {
+    padding-right: 5px;
+}
+
+.padding-all-15px {
+    padding: 15px;
+}
+
+.body-content {
+    overflow: auto;
+}
+/*Generic class definitions eneded here*/
+
+/*breadcrumb code is here for header title redirections
+.breadcrumb {
+    background: transparent;
+    font-size: 16px;
+    padding-left: 0px;
+}
+
+    .breadcrumb > li + li:before {
+        content: "\003e";
+    }
+breadcrumb ended here*/
+
+/*success and error message UI start here*/
+.alert-div {
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    top: 104px;
+    width: 100%; /* Full width */
+}
+
+
+.alert-msg {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    vertical-align: middle;
+    margin: 0 auto;
+    max-width: 900px;
+    border: 0px;
+    border-left: 64px solid transparent;
+    -moz-box-shadow: -8px 5px 18px 4px rgba(88, 85, 85, 0.5);
+    -webkit-box-shadow: -8px 5px 18px 4px rgba(88, 85, 85, 0.5);
+    box-shadow: 0px 5px 16px 4px rgba(88, 85, 85, 0.5);
+    min-height: 50px;
+    position: relative;
+    padding-left: 30px;
+    line-height: 45px;
+}
+
+    .alert-msg .glyphicon {
+        font-size: 28px;
+        font-size: 28px;
+        border-radius: 50%;
+        left: -46px;
+        vertical-align: top;
+        position: absolute;
+        top: 16px;
+    }
+
+    .alert-msg.alert-success {
+        background: #dff0d8;
+        color: #369030;
+        border-color: #369030;
+    }
+
+        .alert-msg.alert-success .glyphicon-ok-sign {
+            background: #369030;
+            color: #fff;
+        }
+
+    .alert-msg.alert-danger {
+        color: #b94a48;
+        background: #f2dede;
+        border-color: #b94a48;
+        padding-left: 30px;
+        /* line-height: 1; */
+    }
+
+        .alert-msg.alert-danger .glyphicon-exclamation-sign {
+            background: #c0413b;
+            color: #FFF;
+        }
+
+.error-list-text {
+    display: inline-block;
+}
+
+    .error-list-text li {
+        list-style-type: disc;
+        display: list-item;
+        line-height: 24px;
+    }
+
+/*This should be uncommented when success/error alert require cancel button start here*/
+/*.alert-msg .glyphicon-remove-sign {
+        padding: 0px;
+        font-size: 18px;
+        background: transparent;
+        float: right;
+        line-height: 68px;
+        margin-right: 25px;
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+        .alert-msg .glyphicon-remove-sign:hover {
+            opacity: 1;
+        }*/
+
+/*success and error message UI ended here*/
+
+/*header section start here*/
+.header, .nav-bar {
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    background: #f1f1f1;
+    top: 0px;
+    display: inline-block;
+    width: 100%;
+    min-width: 750px;
+}
+
+    .header ul li, .nav-bar ul li {
+        display: inline-block;
+    }
+
+/*main header start here*/
+.main-header {
+    background: #296DBA;
+    color: #FFF;
+    float: left;
+    width: 100%;
+}
+
+    .main-header li {
+        padding: 20px 1.90% 10px;
+        font-size: 23px;
+        line-height: 30px;
+        vertical-align: bottom;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+/*logo UI */
+li.logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: #E1F3F3;
+    line-height: 40px;
+    width: 12%;
+    padding-bottom: 0px;
+    padding-top: 14px;
+    background: transparent;
+    float: left;
+    min-width: 130px;
+}
+
+li.acc-btn {
+    float: right;
+    padding-top: 20px;
+    background: transparent;
+    padding-bottom: 0px;
+}
+
+    li.acc-btn > div {
+        display: inline;
+        background: #DDDDDD;
+        color: #000;
+        font-size: 16px;
+        vertical-align: bottom;
+        margin-right: 10px;
+        padding: 5px 20px;
+        cursor: pointer;
+    }
+
+/*menu bar items Test navigation menu bar + Test Masters navigation menu bar + Setting navigation menu bar*/
+.test-menubar,
+.setting-menubar,
+.testmasters-menubar {
+    width: 100%;
+    display: inline-block;
+}
+
+.test-menubar {
+    margin-top: 3px;
+}
+
+    .test-menubar li,
+    .testmasters-menubar li,
+    .setting-menubar li {
+        border: 1px solid #666;
+        border-left: 0px;
+        background: #DDDDDD;
+        float: left;
+        text-align: center;
+        padding: 5px;
+        color: #000;
+        cursor: pointer;
+        background: #DDDDDD;
+        background: -moz-linear-gradient(top, #DDDDDD 0%, #bbb 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, #DDDDDD, color-stop(100%, #bbb)));
+        background: -webkit-linear-gradient(top,#DDDDDD 0%, #bbb 100%);
+        background: -o-linear-gradient(top, #DDDDDD 0%, #bbb 100%);
+        background: -ms-linear-gradient(top, #DDDDDD 0%, #bbb 100%);
+        background: linear-gradient(to bottom, #eee 0%, #bbb 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3680c9', endColorstr='#226cb6', GradientType=0 );
+    }
+
+        .test-menubar li:hover,
+        .setting-menubar li:hover,
+        .testmasters-menubar li:hover {
+            font-weight: 500;
+            background: #95BCF2;
+            /* color: #fff; */
+            background: -moz-linear-gradient(top, #73a8f4 0%, #b8d6f6 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, #73a8f4, color-stop(100%, #b8d6f6)));
+            background: -webkit-linear-gradient(top,#73a8f4 0%, #b8d6f6 100%);
+            background: -o-linear-gradient(top, #73a8f4 0%, #b8d6f6 100%);
+            background: -ms-linear-gradient(top, #73a8f4 0%, #b8d6f6 100%);
+            background: linear-gradient(to bottom, #73a8f4 0%, #b8d6f6 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3680c9', endColorstr='#226cb6', GradientType=0 );
+        }
+
+        .testmasters-menubar li:first-child,
+        .testmasters-menubar li:last-child {
+            width: 12.3%;
+        }
+
+.Exp, .Equ, .InputFields {
+    width: 14%;
+}
+
+.setting-menubar li:first-child {
+    width: 19%;
+}
+
+.setting-menubar li:last-child {
+    width: 14.33%;
+}
+
+.test-menubar li a,
+.testmasters-menubar li a,
+.setting-menubar li a {
+    display: block;
+    color: #000;
+}
+
+.test-menubar li:last-child,
+.testmasters-menubar li:last-child,
+.setting-menubar li:last-child {
+    border-right: 0px;
+}
+
+.header li a:hover {
+    text-decoration: none;
+}
+
+li.active-page,
+li.active-page:hover {
+    font-weight: bold;
+    background: #cae4ff;
+    background: -moz-linear-gradient(top, #a9d3ff 0%, #568bd6 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #a9d3ff, color-stop(100%, #568bd6)));
+    background: -webkit-linear-gradient(top,#a9d3ff 0%, #568bd6 100%);
+    background: -o-linear-gradient(top, #a9d3ff 0%, #568bd6 100%);
+    background: -ms-linear-gradient(top, #a9d3ff 0%, #568bd6 100%);
+    background: linear-gradient(to bottom, #a9d3ff 0%, #568bd6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3680c9', endColorstr='#226cb6', GradientType=0 );
+}
+/*menu bar ended here*/
+
+.Setting-page, .test-master-subpage {
+    /* margin-top:40px; */
+}
+/*application setting page*/
+.sections > div:last-child {
+    margin-top: 50px;
+}
+
+.Setting-page .app-inputfield {
+    padding-top: 50px;
+}
+
+    .Setting-page .app-inputfield > div {
+        margin-top: 56px;
+    }
+
+.app-inputfield > form {
+    padding: 50px 0px 30px;
+    background: #eee;
+    max-width: 65%;
+}
+
+.app-inputfield .appsett-btn {
+    max-width: 100px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 67px;
+    vertical-align: top;
+}
+
+.app-inputfield .form-group {
+    display: inline-block;
+    width: 100%;
+}
+
+.app-inputfield form label {
+    vertical-align: middle;
+    line-height: 34px;
+    text-align: right;
+    padding-left: 0px;
+}
+
+.app-inputfield form input {
+    width: 63%;
+    display: inline-block;
+    max-width: 100%;
+}
+/*application setting page ended here*/
+
+/*Conversion&MathContants  page start here*/
+.sections {
+    float: left;
+    padding: 10px 15px;
+    width: 49.3%;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    border: 1px solid #aaa;
+    margin-top: 10px;
+}
+
+.legend-heading {
+    position: absolute;
+    background: #fff;
+    z-index: 1;
+    padding: 0px 2px;
+    display: block;
+    top: -10px;
+}
+
+/*Conversion&MathContants  page ended here*/
+
+/*Popup modal*/
+.coreModal-body,
+.coreModal-body .form-group,
+.tests-edit-control {
+    display: inline-block;
+    width: 100%;
+}
+
+    .coreModal-body label {
+        line-height: 34px;
+        text-align: right;
+        margin-bottom: 0px;
+    }
+
+    .coreModal-body .radio-btn-row label {
+        line-height: 22px;
+    }
+
+.popupbtndiv {
+    text-align: right;
+}
+
+.popup-bck {
+    overflow-y: auto;
+}
+
+.modal.in .popup-content-box,
+.modal.fade .popup-content-box {
+    padding: 0px;
+    position: fixed;
+    margin: 0px auto;
+    top: 50%;
+    left: 50%;
+    z-index: 11;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    min-width: 350px;
+}
+
+.modal-header {
+    border-radius: 4px 4px 0px 0px;
+}
+
+.popup-content-box .close {
+    color: #FFF;
+    opacity: 0.6;
+}
+
+    .popup-content-box .close:hover {
+        opacity: 1;
+    }
+
+.common-btn.popup-btn {
+    min-width: 110px;
+    padding: 6px 5px;
+    text-align: center;
+}
+/*Popup modal ended here*/
+
+/*Test Master > TESTS page start here*/
+.tests-select {
+    float: left;
+    padding-left: 14px;
+    vertical-align: middle;
+    line-height: 21px;
+}
+
+.tests-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.action-panel.panel, .tests-action-panel {
+    display: inline-block;
+    width: 100%;
+    padding: 25px 0px 10px;
+    background: #eee;
+    margin: 20px 0px;
+}
+
+    .action-panel .form-group,
+    .tests-action-panel .form-group {
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+        .action-panel .form-group label,
+        .tests-action-panel label {
+            line-height: 30px;
+            text-align: right;
+            /* padding: 0px; */
+            margin-bottom: 0px;
+        }
+
+.action-panel button.manage-btn {
+    width: 100%;
+    margin-top: 0px;
+}
+
+.action-panel button,
+.common-btn.rename-btn {
+    padding: 6px 5px;
+    text-align: center;
+}
+
+.tests-action-panel button {
+    margin-bottom: 10px;
+}
+
+.tests-action-panel input, .tests-action-panel select {
+    margin-bottom: 15px;
+}
+
+.direction-btn {
+    max-width: 120px;
+    margin-top: 180px;
+}
+
+    .direction-btn button,
+    .direction-btn-cnfg button {
+        padding: 0px;
+    }
+
+        .direction-btn button span,
+        .direction-btn-cnfg button span {
+            font-size: 28px;
+            top: 2px;
+        }
+
+.tests-page {
+    position: relative;
+    padding-right: 50px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+    .tests-page .direction-btn-cnfg {
+        top: 180px;
+        right: 0px;
+        position: absolute;
+        width: 44px;
+    }
+/*show inactive custome check box start here*/
+.check-inactive {
+    float: right;
+    padding-right: 15px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+    .check-inactive label {
+        display: inline-block;
+        max-width: 100%;
+        position: relative;
+        margin: 0px 10px 0px 0px;
+    }
+
+        .check-inactive label:before {
+            content: '';
+            position: absolute;
+            /*left: 12px;
+        top: 14px; */
+            left: -20px;
+            top: -15px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #979797;
+            background: #FFF;
+            z-index: 34;
+            cursor: pointer;
+        }
+
+        .check-inactive label:after {
+            opacity: 0.0;
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 7px;
+            background: transparent;
+            top: -9px;
+            left: -16px;
+            border: 4px solid #00ff00;
+            border-top: none;
+            border-right: none;
+            cursor: pointer;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -o-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            z-index: 55;
+        }
+
+    .check-inactive input[type=checkbox] {
+        opacity: 0 !important;
+    }
+/* Checkboxes aspect */
+/* :before is for the box */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+    opacity: 1;
+}
+
+/* Check symbol aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+/* if "not checked" */
+[type="checkbox"]:not(:checked) + label:after {
+    opacity: 0; /* invisible */
+}
+/* If "checked" */
+[type="checkbox"]:checked + label:after {
+    opacity: 1; /* visible */
+}
+
+.checkComplete ::selection {
+    background: rgba(2, 139, 255, 0);
+}
+
+.btn-info.common-btn-animation:before {
+    background: #269abc;
+    border-color: #269abc;
+}
+/*custome check box ended here*/
+
+/*Test Master > TESTS page ended here*/
+
+/*Test configuration page start here */
+.tests-configuration {
+    padding-right: 10%;
+}
+
+    .tests-configuration .common-btn.popup-btn {
+        max-width: 116px;
+    }
+
+.direction-btn-cnfg button {
+    max-width: 43px;
+}
+
+.attr-table-btn {
+    padding-left: 8px;
+}
+
+    .attr-table-btn > button {
+        max-width: 100px;
+    }
+
+.exp-command-btn {
+    margin-bottom: 15px;
+    height: 200px;
+    overflow: auto;
+}
+
+    .exp-command-btn > button {
+        margin-bottom: 5px;
+    }
+
+        .exp-command-btn > button[disabled] {
+            background: #ccc;
+            color: #666;
+        }
+
+/*Test configuration page ended here */
+
+/*Test Master Expression page*/
+.Testmaster-exp {
+    width: 90%;
+    max-width: 970px;
+}
+
+.exp-close-btn {
+    float: right;
+}
+
+.add-cmd-btn {
+    /* margin-right: 12px; */
+    padding: 4px 11px !important;
+}
+
+    .add-cmd-btn span.glyphicon {
+        font-size: 17px;
+        line-height: 1;
+    }
+
+
+
+.cal-block {
+    margin-top: 120px;
+}
+/*Test Master Expression page ended here*/
+
+/* classes added by Deepak start here */
+
+/* common skeleton classes start here */
+.standrad-margin-top {
+    margin-top: 20px;
+}
+/* common skeleton classes end here */
+
+/* Test Master page css start here */
+.test-master-page {
+    max-width: 1448px;
+    margin: 0 auto;
+}
+
+.right-panel-bottom-wrapper {
+    border: solid 1px #dddddd;
+    padding: 15px;
+    margin-top: 20px;
+    background: #eeeeee;
+}
+
+.common-btn {
+    padding: 6px 20px;
+    color: #ffffff;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+}
+
+.common-btn-animation {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    border-radius: 10px;
+}
+
+    .common-btn-animation:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #b4261f;
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: .3s;
+        transition-duration: .3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+         border-radius: 10px;
+    }
+
+    .common-btn-animation:active:before, .common-btn-animation:focus:before, .common-btn-animation:hover:before {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+    }
+
+.submit-btn {
+    background: rgba(54,128,201,1);
+    background: -moz-linear-gradient(top, rgba(54,128,201,1) 0%, rgba(34,108,182,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(54,128,201,1)), color-stop(100%, rgba(34,108,182,1)));
+    background: -webkit-linear-gradient(top, rgba(54,128,201,1) 0%, rgba(34,108,182,1) 100%);
+    background: -o-linear-gradient(top, rgba(54,128,201,1) 0%, rgba(34,108,182,1) 100%);
+    background: -ms-linear-gradient(top, rgba(54,128,201,1) 0%, rgba(34,108,182,1) 100%);
+    background: linear-gradient(to bottom, rgba(54,128,201,1) 0%, rgba(34,108,182,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3680c9', endColorstr='#226cb6', GradientType=0 );
+    border-color: #316090;
+}
+
+    .submit-btn:before {
+        background: #2a5786;
+    }
+
+    .submit-btn:active, .submit-btn:focus, .submit-btn:hover {
+        border-color: #2a5786;
+        color: #ffffff;
+    }
+
+.reset-btn {
+    background: rgba(211,82,75,1);
+    background: -moz-linear-gradient(top, rgba(211,82,75,1) 0%, rgba(192,65,59,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(211,82,75,1)), color-stop(100%, rgba(192,65,59,1)));
+    background: -webkit-linear-gradient(top, rgba(211,82,75,1) 0%, rgba(192,65,59,1) 100%);
+    background: -o-linear-gradient(top, rgba(211,82,75,1) 0%, rgba(192,65,59,1) 100%);
+    background: -ms-linear-gradient(top, rgba(211,82,75,1) 0%, rgba(192,65,59,1) 100%);
+    background: linear-gradient(to bottom, rgba(211,82,75,1) 0%, rgba(192,65,59,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3524b', endColorstr='#c0413b', GradientType=0 );
+    border-color: #c0413b;
+}
+
+    .reset-btn:before {
+        background: #b4261f;
+    }
+
+    .reset-btn:active, .reset-btn:focus, .reset-btn:hover {
+        border-color: #c22d26;
+        color: #ffffff;
+    }
+
+.info-btn {
+    background: rgba(87,87,87,1);
+    background: -moz-linear-gradient(top, rgba(87,87,87,1) 0%, rgba(54,54,54,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(87,87,87,1)), color-stop(100%, rgba(54,54,54,1)));
+    background: -webkit-linear-gradient(top, rgba(87,87,87,1) 0%, rgba(54,54,54,1) 100%);
+    background: -o-linear-gradient(top, rgba(87,87,87,1) 0%, rgba(54,54,54,1) 100%);
+    background: -ms-linear-gradient(top, rgba(87,87,87,1) 0%, rgba(54,54,54,1) 100%);
+    background: linear-gradient(to bottom, rgba(87,87,87,1) 0%, rgba(54,54,54,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#575757', endColorstr='#363636', GradientType=0 );
+    border-color: #363636;
+}
+
+    .info-btn:before {
+        background: #2a2a2a;
+    }
+
+    .info-btn:active, .info-btn:focus, .info-btn:hover {
+        border-color: #1a1a1a;
+        color: #ffffff;
+    }
+
+.create-btn {
+    background: rgba(89,183,82,1);
+    background: -moz-linear-gradient(top, rgba(89,183,82,1) 0%, rgba(64,155,58,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(89,183,82,1)), color-stop(100%, rgba(64,155,58,1)));
+    background: -webkit-linear-gradient(top, rgba(89,183,82,1) 0%, rgba(64,155,58,1) 100%);
+    background: -o-linear-gradient(top, rgba(89,183,82,1) 0%, rgba(64,155,58,1) 100%);
+    background: -ms-linear-gradient(top, rgba(89,183,82,1) 0%, rgba(64,155,58,1) 100%);
+    background: linear-gradient(to bottom, rgba(89,183,82,1) 0%, rgba(64,155,58,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59b752', endColorstr='#409b3a', GradientType=0 );
+    border-color: #369030;
+}
+
+    .create-btn:before {
+        background: #2b7925;
+    }
+
+    .create-btn:active, .create-btn:focus, .create-btn:hover {
+        border-color: #369030;
+        color: #ffffff;
+    }
+
+/*table UI starts here*/
+.tableblock {
+    margin-bottom: 0;
+    background: #ffffff;
+    border: 0px;
+}
+
+    .tableblock > .ui-jqgrid,
+    .table-max-height > .ui-jqgrid,
+    .test-master-subpage .table-max-height > .ui-jqgrid {
+        height: 667px !important;
+        overflow-x: hidden;
+        overflow-y: auto;
+        max-height: 667px;
+        width: 100% !important;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+
+    .cBase-custom-table thead, .modal-header,
+    .tableblock .ui-jqgrid .ui-jqgrid-htable .ui-th-column {
+        background: rgba(54,128,201,1);
+        background: -moz-linear-gradient(top, rgba(54,128,201,1) 0%, rgba(34,108,182,1) 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(54,128,201,1)), color-stop(100%, rgba(34,108,182,1)));
+        background: -webkit-linear-gradient(top, rgba(54,128,201,1) 0%, rgba(34,108,182,1) 100%);
+        background: -o-linear-gradient(top, rgba(54,128,201,1) 0%, rgba(34,108,182,1) 100%);
+        background: -ms-linear-gradient(top, rgba(54,128,201,1) 0%, rgba(34,108,182,1) 100%);
+        background: linear-gradient(to bottom, rgba(54,128,201,1) 0%, rgba(34,108,182,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3680c9', endColorstr='#226cb6', GradientType=0 );
+    }
+
+        .cBase-custom-table thead tr th, .modal-header,
+        .tableblock .ui-jqgrid .ui-jqgrid-htable .ui-th-column {
+            color: #ffffff;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+            border: 0px;
+            border-left: 1px solid #FFF;
+            padding: 8px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .ui-jqgrid tr.jqgrow:nth-child(odd){
+           background: aliceblue;
+        }
+
+    .tableblock .ui-jqgrid .ui-jqgrid-btable,
+    .tableblock .ui-jqgrid .ui-jqgrid-htable {
+        width: 100% !important;
+    }
+
+    .tableblock .ui-jqgrid .ui-jqgrid-bdiv {
+        height: 100% !important;
+    }
+
+    .tableblock .ui-jqgrid .ui-jqgrid-hbox {
+        padding-right: 0px;
+    }
+
+    .tableblock .ui-jqgrid tr.jqgfirstrow td {
+        padding: 0 2px 0 2px;
+        border-right-width: 1px;
+        border-right-style: solid;
+        height: auto;
+    }
+
+    .tableblock .ui-jqgrid tr.ui-row-ltr td {
+        padding: 8px;
+        line-height: 1;
+        vertical-align: middle;
+    }
+
+    .tableblock .ui-jqgrid .ui-jqgrid-resize-ltr {
+        float: right;
+        margin: -2px -2px -2px 0;
+    }
+
+    .tableblock .ui-state-highlight {
+        border: 0px;
+        background: none;
+        border-color: #aaa;
+    }
+
+    .tableblock .ui-jqgrid tr.jqgrow.ui-active-state,
+       .tableblock .ui-jqgrid tr.jqgrow.ui-state-hover,  
+        .tableblock .ui-jqgrid tr.jqgrow.ui-state-hover.ui-state-highlight {
+        border: 1px solid #86b4e5;
+        background: #cae4ff;
+        background: -moz-linear-gradient(top,#cae4ff 0%, #86b4e5 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, #cae4ff), color-stop(100%, #86b4e5));
+        background: -webkit-linear-gradient(top, #cae4ff 0%, #86b4e5 100%);
+        background: -o-linear-gradient(top,#cae4ff 0%, #86b4e5 100%);
+        background: -ms-linear-gradient(top, #cae4ff 0%, #86b4e5 100%);
+        background: linear-gradient(to bottom,#cae4ff 0%, #86b4e5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3680c9', endColorstr='#226cb6', GradientType=0 );
+    }
+
+    .tableblock.location-list > .ui-jqgrid {
+        height: 470px !important;
+    }
+
+.inputTable > .cBase-custom-table thead tr th:first-child {
+    width: 160px;
+}
+
+.test-master-subpage .tableblock.calculated-result-block > .ui-jqgrid {
+    height: 500px !important;
+    padding: 10px;
+    display: inline-block;
+}
+
+.test-master-subpage .tableblock > .ui-jqgrid {
+    padding-left: 0%;
+    max-height: 540px;
+    min-height: 400px;
+    height: auto;
+}
+
+.tests-configuration .tableblock > .ui-jqgrid {
+    max-height: 420px;
+}
+
+.Setting-page .tableblock > .ui-jqgrid {
+    height: auto;
+    min-height: 300px;
+    max-height: 650px;
+}
+
+.location-attribute .tableblock > .ui-jqgrid {
+    min-height: 240px;
+    height: auto;
+    max-height: 550px;
+}
+
+.manage-btn a, .manage-btn a:hover {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+/* Test Master page css end here */
+
+/* location attribute page css start here */
+.location-grey-bg {
+    border: solid 1px #dddddd;
+    padding: 20px 0 0;
+    background: #eeeeee;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.location-attribute .check-inactive {
+    text-align: right;
+    float: left;
+}
+/* location attribute page css end here */
+
+/* part attribute page css start here */
+
+.part-attribute .form-horizontal .form-group {
+    margin: 0px 0px 15px 0px;
+}
+
+.part-attribute .attriubute-grid-bg {
+    max-height: 520px;
+    overflow-y: auto;
+    width: 100%;
+    min-height: 200px;
+    border: 1px solid #ddd;
+    min-height: 300px;
+}
+
+.part-attribute .tests-select {
+    width: 88px;
+    padding-left: 0px;
+    text-align: right;
+}
+/* part attribute page css end here */
+
+/*disable state*/
+.disable-state input,
+.disable-state select,
+.disable-state button {
+    color: #999;
+    background: #ddd;
+    pointer-events: none;
+}
+/*disable state ended here*/
+
+.model-open {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+/*Input Fields Page*/
+.input-fields-page .tests-select,
+.equation .tests-select,
+.reports-page .tests-select {
+    width: 95px;
+}
+
+.input-field-grid-view {
+    min-height: 433px;
+}
+
+.btn-block.common-btn {
+    padding-left: 2px;
+    padding-right: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.input-fields-page .btn-sw-view > div {
+    padding-left: 10px;
+    max-width: 100%;
+}
+
+    .input-fields-page .btn-sw-view > div:nth-child(2) {
+        padding-left: 5px;
+    }
+/*Input Fields screen ended here*/
+
+/*Equation screen starts here */
+.direction-btn-position {
+    margin-top: 188px;
+    position: absolute;
+    margin-left: -10px;
+}
+
+.equation-div {
+    padding: 10px 15px;
+    height: 250px;
+    overflow: auto;
+    margin-bottom: 15px;
+}
+
+.equ-input-div .equation-div,
+.equ-input-div .exp-command-btn {
+    height: 140px;
+}
+
+.equ-input-div .form-group {
+    margin: 0px;
+}
+
+.equ-input-div .cal-block {
+    padding-right: 6%;
+    margin-bottom: 140px;
+}
+
+.calculated-result-block {
+    height: 460px;
+    overflow: hidden;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.equation-input-div .tests-select {
+    width: 16.6%;
+    padding-left: 0;
+    min-width: 100px;
+}
+
+.equation-input-div button {
+    position: absolute;
+    right: 15px;
+}
+/*Equation screen ended here */
+/**Report Screen starts here*/
+.radio-inline input[type="radio"] {
+    margin-top: 2px;
+}
+
+.datepicker-icon {
+    position: absolute;
+    right: 0px;
+    font-size: 24px;
+    color: darkgoldenrod;
+}
+
+.datepicker.datepicker-inline.dropdown-menu {
+    top: 0 !important;
+    left: 0px !important;
+    display: block;
+}
+
+input, select, textarea {
+    max-width: 100%;
+}
+
+/*jquery UI override */
+.body-content .ui-widget-overlay {
+    display: none;
+}
+
+.input-error {
+    border: 1px solid red;
+}

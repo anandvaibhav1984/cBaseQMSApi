@@ -1,0 +1,159 @@
+﻿@using cBaseQMS.Areas.cBaseQMS.Helpers
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    <link href="~/Areas/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Areas/Content/Site.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link href="~/Content/jquery.jqGrid/ui.jqgrid.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/minified/jquery-ui.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/base/minified/jquery.ui.datepicker.min.css" rel="stylesheet" />
+    <link href="~/Areas/Content/cBase-class.css" rel="stylesheet" />
+    <link href="~/Areas/Content/cBase-class-media.css" rel="stylesheet" />
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Areas/Scripts/Helpers.js"></script>
+    <script src="~/Scripts/jquery.jqGrid.min.js"></script>
+
+    <script>
+        $(document).ready(function (e) {
+            $(window).on('load',function () {
+                $(".body-content").css('margin-top', parseInt($(".nav-bar").height() + $(".header").height() + 20) + 'px');// Body give top space for fixed header section.
+                $(".nav-bar").css('margin-top', $(".header").height());//fixed navigation bar
+                //Error and success message
+            });
+            $(window).resize(function () {// On window resize date picker should hide due to responsive view
+                $(".body-content").css('margin-top', parseInt($(".nav-bar").height() + $(".header").height() + 20) + 'px');
+                $(".nav-bar").css('margin-top', $(".header").height());
+                $('.datepicker').hide();
+            });
+            //$(".alert-div").hide(); //Error and success message
+            //setTimeout(function () { // Alert hide after 5sec
+            //    $(".alert-div").hide();
+            //}, 5000); //
+            
+        
+            /*Date picker script starts here
+            $('#fromDateInput').datepicker({ //Report screen From date selection
+                format: 'yyyy/mm/dd',
+                todayHighlight: true,
+                autoclose: true,
+            });
+
+            $('#toDateInput').datepicker({//Report screen To date selection
+                format: 'yyyy/mm/dd',
+                todayHighlight: true,
+                autoclose: true,
+            });
+
+            $('#toDateInput , #fromDateInput').focus(function () { //picker custom position from top
+                var popup = $(this).offset();
+                var popupTop = popup.top + 35;
+                $('.datepicker').css({ 'top': popupTop });
+            });
+            /*Date picker script ended here*/
+        });
+    </script>
+</head>
+<body>
+    <div class="nav-bar">
+        <ul class="test-menubar">
+            <li class="col-xs-3 TestMaster active-page">
+                @Html.ActionLink("Test Master", "Index", "TestMaster", new { Area = "cBaseQMS" }, null)
+            </li>
+            <li class="col-xs-4 LocationAttributes">
+                @Html.ActionLink("Location Attribute", "Index", "Location", new { Area = "cBaseQMS" }, null)
+            </li>
+            <li class="col-xs-3 PartAttribute">
+                @Html.ActionLink("Part Attribute", "Index", "Parts", new { Area = "cBaseQMS" }, null)
+            </li>
+            <li class="col-xs-2 Setting">
+                @Html.ActionLink("Setting", "Index", "Constants", new { Area = "cBaseQMS" }, null)
+            </li>
+        </ul>
+        <ul class="setting-menubar" style="display:none">
+            <li class="col-xs-2 AppSetting">
+                @Html.ActionLink("Application Setting", "Index", "ApplicationSetting", new { Area = "cBaseQMS" }, null)
+            </li>
+            <li class="col-xs-4 QuickFind">
+                @Html.ActionLink("Quick Find Element Name", "Index", "QuickFindNames", new { Area = "cBaseQMS" }, null)
+            </li>
+            <li class="col-xs-4 convMathConstants">
+                @Html.ActionLink("Conversion & Math Constants", "Index", "Constants", new { Area = "cBaseQMS" }, null)
+            </li>
+            <li class="col-xs-2 APITemplate">API Template</li>
+        </ul>
+        <ul class="testmasters-menubar" style="display:none">
+            <li class="col-xs-1 TestBlock">
+                @Html.ActionLink("Tests", "Index", "Tests", new { Area = "cBaseQMS" }, null)
+            </li>
+            <li class="col-xs-2 Config">
+                @Html.ActionLink("Configuration", "Index", "Configuration", new { Area = "cBaseQMS" }, null)
+            </li>
+            <li class="col-xs-2 Exp">
+                @Html.ActionLink("Expression", "Index", "TestExpression", new { Area = "cBaseQMS" }, null)
+            </li>
+            <li class="col-xs-2 Equ">
+                @Html.ActionLink("Equations", "Index", "TestEquation", new { Area = "cBaseQMS" }, null)
+            </li>
+            <li class="col-xs-2 InputFields">
+                @Html.ActionLink("Input Fields", "Index", "InputFields", new { Area = "cBaseQMS" }, null)
+            </li>
+            <li class="col-xs-2 CalculatedFields">
+                @Html.ActionLink("Calculated Fields", "Index", "CalculatedFields", new { Area = "cBaseQMS" }, null)
+            </li>
+            <li class="col-xs-1 Reports">
+                @Html.ActionLink("Reports", "Index", "Test", new { Area = "cBaseQMS" }, null)
+            </li>
+        </ul>
+    </div>
+    @*success and error message*@
+    <div class="alert-div">
+        <div class="alert alert-success alert-msg" style="display:none">
+            <span class="glyphicon glyphicon-ok-sign"></span>
+            <span id="alertSucess"></span>
+        </div>
+        <div id="error-list" class="alert alert-danger alert-msg" style="display:none">
+            <span class="glyphicon glyphicon-exclamation-sign error-logo"></span>
+            <ul class="error-list-text"></ul>
+        </div>
+    </div>
+
+    <div class="container-fluid body-content">
+        <div id="Notification">
+        </div>
+        @*@if (TempData.GetAlerts().Any())
+        {
+            <div class="container alert-container">
+                @foreach (var alert in TempData.GetAlerts())
+                {
+                    <div> Test1</div>
+                    <div class="alert @alert.AlertClass ">
+                        <button type="button" class="close"  aria-hidden="true">&times;</button>
+                        @alert.Message
+                    </div>
+                }
+            </div>
+        }*@
+        @Html.Raw(Html.BuildBreadcrumbNavigation())
+        @RenderBody()
+
+    </div>
+    @*<footer style="display:none">
+        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </footer>*@
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

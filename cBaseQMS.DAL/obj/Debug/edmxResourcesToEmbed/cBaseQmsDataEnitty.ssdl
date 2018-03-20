@@ -1,0 +1,525 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="cBaseDevModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AppParameter">
+    <Key>
+      <PropertyRef Name="AppParamID" />
+    </Key>
+    <Property Name="AppParamID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ParamName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ParamValue" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Components">
+    <Key>
+      <PropertyRef Name="ComponentID" />
+    </Key>
+    <Property Name="ComponentID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ComponentName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ShortName" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cBaseDev.dbo.ELMAH_Error' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="ELMAH_Error">
+    <Key>
+      <PropertyRef Name="ErrorId" />
+      <PropertyRef Name="Application" />
+      <PropertyRef Name="Host" />
+      <PropertyRef Name="Type" />
+      <PropertyRef Name="Source" />
+      <PropertyRef Name="Message" />
+      <PropertyRef Name="User" />
+      <PropertyRef Name="StatusCode" />
+      <PropertyRef Name="TimeUtc" />
+      <PropertyRef Name="Sequence" />
+      <PropertyRef Name="AllXml" />
+    </Key>
+    <Property Name="ErrorId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Application" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="Host" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Type" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Source" Type="nvarchar" MaxLength="60" Nullable="false" />
+    <Property Name="Message" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="User" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="StatusCode" Type="int" Nullable="false" />
+    <Property Name="TimeUtc" Type="datetime" Nullable="false" />
+    <Property Name="Sequence" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AllXml" Type="ntext" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Equations">
+    <Key>
+      <PropertyRef Name="EquationID" />
+    </Key>
+    <Property Name="EquationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestID" Type="int" Nullable="false" />
+    <Property Name="EquationName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="EquationString" Type="nvarchar(max)" />
+    <Property Name="Condition" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="InputFields">
+    <Key>
+      <PropertyRef Name="InputFieldID" />
+    </Key>
+    <Property Name="InputFieldID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestInputID" Type="int" Nullable="false" />
+    <Property Name="FieldColumnName" Type="varchar" MaxLength="50" />
+    <Property Name="FieldRowNo" Type="int" />
+    <Property Name="FieldName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="CurrentFieldValue" Type="numeric" Precision="18" Scale="5" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="TestID" Type="int" />
+  </EntityType>
+  <EntityType Name="InputFieldsValue">
+    <Key>
+      <PropertyRef Name="InputFieldValueID" />
+    </Key>
+    <Property Name="InputFieldValueID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InputFieldID" Type="int" Nullable="false" />
+    <Property Name="TestCycle" Type="int" Nullable="false" />
+    <Property Name="Value" Type="numeric" Precision="18" Scale="5" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="LocationAttribtes">
+    <Key>
+      <PropertyRef Name="LocAttrID" />
+    </Key>
+    <Property Name="LocAttrID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MasterLocationID" Type="int" Nullable="false" />
+    <Property Name="LocAttrName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Value" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="UOMID" Type="int" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="LocationMaster">
+    <Key>
+      <PropertyRef Name="LocationMasterID" />
+    </Key>
+    <Property Name="LocationMasterID" Type="int" Nullable="false" />
+    <Property Name="LocationName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="LocationDescription" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="UpdatedTimestamp" Type="datetime" />
+  </EntityType>
+  <EntityType Name="MathConstants">
+    <Key>
+      <PropertyRef Name="ConstantID" />
+    </Key>
+    <Property Name="ConstantID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ConstantName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Value" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PartAttributes">
+    <Key>
+      <PropertyRef Name="PartAttrID" />
+    </Key>
+    <Property Name="PartAttrID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PartAttrName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PartMasterID" Type="int" Nullable="false" />
+    <Property Name="TestID" Type="int" Nullable="false" />
+    <Property Name="InputFieldID" Type="int" Nullable="false" />
+    <Property Name="MinValue" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="MaxValue" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="UOMID" Type="int" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="PartMaster">
+    <Key>
+      <PropertyRef Name="PartMasterID" />
+    </Key>
+    <Property Name="PartMasterID" Type="int" Nullable="false" />
+    <Property Name="PartNumber" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="PartDescription" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="UpdatedTimestamp" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TestAttributes">
+    <Key>
+      <PropertyRef Name="TestAttrID" />
+    </Key>
+    <Property Name="TestAttrID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestID" Type="int" Nullable="false" />
+    <Property Name="Sequence" Type="smallint" Nullable="false" />
+    <Property Name="Attribute" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Value" Type="nvarchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TestCalculatedFields">
+    <Key>
+      <PropertyRef Name="CalcFieldID" />
+    </Key>
+    <Property Name="CalcFieldID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestID" Type="int" Nullable="false" />
+    <Property Name="Sequence" Type="tinyint" Nullable="false" />
+    <Property Name="FieldName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
+    <Property Name="Calculation" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TestInputs">
+    <Key>
+      <PropertyRef Name="TestInputID" />
+    </Key>
+    <Property Name="TestInputID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestID" Type="int" Nullable="false" />
+    <Property Name="InputName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UOM" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Rows" Type="int" Nullable="false" />
+    <Property Name="Columns" Type="int" Nullable="false" />
+    <Property Name="Sequence" Type="int" Nullable="false" />
+    <Property Name="Image" Type="binary" MaxLength="5000" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="TestMaster">
+    <Key>
+      <PropertyRef Name="TestMasterID" />
+    </Key>
+    <Property Name="TestMasterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestMasterName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+  </EntityType>
+  <EntityType Name="TestMasterMapping">
+    <Key>
+      <PropertyRef Name="TestMasterMapID" />
+    </Key>
+    <Property Name="TestMasterMapID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestMasterID" Type="int" Nullable="false" />
+    <Property Name="PartMasterID" Type="int" Nullable="false" />
+    <Property Name="LocationMasterID" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Tests">
+    <Key>
+      <PropertyRef Name="TestID" />
+    </Key>
+    <Property Name="TestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestMasterID" Type="int" Nullable="false" />
+    <Property Name="TestName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Descriptions" Type="nvarchar" MaxLength="500" />
+    <Property Name="Sequence" Type="int" Nullable="false" />
+    <Property Name="Expression" Type="nvarchar(max)" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="IsExecuted" Type="bit" />
+    <Property Name="Result" Type="bit" />
+  </EntityType>
+  <EntityType Name="UoM">
+    <Key>
+      <PropertyRef Name="UOMID" />
+    </Key>
+    <Property Name="UOMID" Type="smallint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UOMName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="UOM" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ModifiedBy" Type="int" />
+    <Property Name="ModifiedOn" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'cBaseDev.dbo.vWLocationAttributes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vWLocationAttributes">
+    <Key>
+      <PropertyRef Name="LocAttrName" />
+      <PropertyRef Name="TestMasterID" />
+    </Key>
+    <Property Name="LocAttrName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Value" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="UOMID" Type="int" />
+    <Property Name="TestMasterID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Equations_Tests">
+    <End Role="Tests" Type="Self.Tests" Multiplicity="1" />
+    <End Role="Equations" Type="Self.Equations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tests">
+        <PropertyRef Name="TestID" />
+      </Principal>
+      <Dependent Role="Equations">
+        <PropertyRef Name="TestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InputFields_InputFieldsValue">
+    <End Role="InputFields" Type="Self.InputFields" Multiplicity="1" />
+    <End Role="InputFieldsValue" Type="Self.InputFieldsValue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InputFields">
+        <PropertyRef Name="InputFieldID" />
+      </Principal>
+      <Dependent Role="InputFieldsValue">
+        <PropertyRef Name="InputFieldID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PartAttributes_Tests">
+    <End Role="Tests" Type="Self.Tests" Multiplicity="1" />
+    <End Role="PartAttributes" Type="Self.PartAttributes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tests">
+        <PropertyRef Name="TestID" />
+      </Principal>
+      <Dependent Role="PartAttributes">
+        <PropertyRef Name="TestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Test_TestInputs">
+    <End Role="Tests" Type="Self.Tests" Multiplicity="1" />
+    <End Role="TestInputs" Type="Self.TestInputs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tests">
+        <PropertyRef Name="TestID" />
+      </Principal>
+      <Dependent Role="TestInputs">
+        <PropertyRef Name="TestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestAttributes_Tests">
+    <End Role="Tests" Type="Self.Tests" Multiplicity="1" />
+    <End Role="TestAttributes" Type="Self.TestAttributes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tests">
+        <PropertyRef Name="TestID" />
+      </Principal>
+      <Dependent Role="TestAttributes">
+        <PropertyRef Name="TestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestCalculatedFields_Tests">
+    <End Role="Tests" Type="Self.Tests" Multiplicity="1" />
+    <End Role="TestCalculatedFields" Type="Self.TestCalculatedFields" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tests">
+        <PropertyRef Name="TestID" />
+      </Principal>
+      <Dependent Role="TestCalculatedFields">
+        <PropertyRef Name="TestID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestInputs_InputFields">
+    <End Role="TestInputs" Type="Self.TestInputs" Multiplicity="1" />
+    <End Role="InputFields" Type="Self.InputFields" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TestInputs">
+        <PropertyRef Name="TestInputID" />
+      </Principal>
+      <Dependent Role="InputFields">
+        <PropertyRef Name="TestInputID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestMaster_Tests">
+    <End Role="TestMaster" Type="Self.TestMaster" Multiplicity="1" />
+    <End Role="Tests" Type="Self.Tests" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TestMaster">
+        <PropertyRef Name="TestMasterID" />
+      </Principal>
+      <Dependent Role="Tests">
+        <PropertyRef Name="TestMasterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestMasterMapping_LocationMaster">
+    <End Role="LocationMaster" Type="Self.LocationMaster" Multiplicity="1" />
+    <End Role="TestMasterMapping" Type="Self.TestMasterMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LocationMaster">
+        <PropertyRef Name="LocationMasterID" />
+      </Principal>
+      <Dependent Role="TestMasterMapping">
+        <PropertyRef Name="LocationMasterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestMasterMapping_PartMaster">
+    <End Role="PartMaster" Type="Self.PartMaster" Multiplicity="1" />
+    <End Role="TestMasterMapping" Type="Self.TestMasterMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PartMaster">
+        <PropertyRef Name="PartMasterID" />
+      </Principal>
+      <Dependent Role="TestMasterMapping">
+        <PropertyRef Name="PartMasterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TestMasterMapping_TestMasterMapping">
+    <End Role="TestMaster" Type="Self.TestMaster" Multiplicity="1" />
+    <End Role="TestMasterMapping" Type="Self.TestMasterMapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TestMaster">
+        <PropertyRef Name="TestMasterID" />
+      </Principal>
+      <Dependent Role="TestMasterMapping">
+        <PropertyRef Name="TestMasterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="usp_GetLocationAndPartMapping" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TestMasterID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_GetTestMasterByTestId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Testid" Type="int" Mode="In" />
+  </Function>
+  <Function Name="usp_SaveLocationAndPartMapping" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TestMasterID" Type="int" Mode="In" />
+    <Parameter Name="PartMasterID" Type="int" Mode="In" />
+    <Parameter Name="LocationMasterID" Type="int" Mode="In" />
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="CreatedBy" Type="int" Mode="In" />
+    <Parameter Name="CreatedOn" Type="datetime" Mode="In" />
+    <Parameter Name="UpdatedBy" Type="int" Mode="In" />
+    <Parameter Name="UpdatedOn" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="usp_UpdateLocationAndPartMapping" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="IsActive" Type="bit" Mode="In" />
+    <Parameter Name="UpdatedBy" Type="int" Mode="In" />
+    <Parameter Name="UpdatedOn" Type="datetime" Mode="In" />
+    <Parameter Name="TestMasterMapID" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="cBaseDevModelStoreContainer">
+    <EntitySet Name="AppParameter" EntityType="Self.AppParameter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Components" EntityType="Self.Components" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Equations" EntityType="Self.Equations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InputFields" EntityType="Self.InputFields" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InputFieldsValue" EntityType="Self.InputFieldsValue" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LocationAttribtes" EntityType="Self.LocationAttribtes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LocationMaster" EntityType="Self.LocationMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MathConstants" EntityType="Self.MathConstants" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PartAttributes" EntityType="Self.PartAttributes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PartMaster" EntityType="Self.PartMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TestAttributes" EntityType="Self.TestAttributes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TestCalculatedFields" EntityType="Self.TestCalculatedFields" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TestInputs" EntityType="Self.TestInputs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TestMaster" EntityType="Self.TestMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TestMasterMapping" EntityType="Self.TestMasterMapping" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tests" EntityType="Self.Tests" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UoM" EntityType="Self.UoM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ELMAH_Error" EntityType="Self.ELMAH_Error" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ELMAH_Error].[ErrorId] AS [ErrorId], 
+    [ELMAH_Error].[Application] AS [Application], 
+    [ELMAH_Error].[Host] AS [Host], 
+    [ELMAH_Error].[Type] AS [Type], 
+    [ELMAH_Error].[Source] AS [Source], 
+    [ELMAH_Error].[Message] AS [Message], 
+    [ELMAH_Error].[User] AS [User], 
+    [ELMAH_Error].[StatusCode] AS [StatusCode], 
+    [ELMAH_Error].[TimeUtc] AS [TimeUtc], 
+    [ELMAH_Error].[Sequence] AS [Sequence], 
+    [ELMAH_Error].[AllXml] AS [AllXml]
+    FROM [dbo].[ELMAH_Error] AS [ELMAH_Error]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vWLocationAttributes" EntityType="Self.vWLocationAttributes" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vWLocationAttributes].[LocAttrName] AS [LocAttrName], 
+    [vWLocationAttributes].[Value] AS [Value], 
+    [vWLocationAttributes].[UOMID] AS [UOMID], 
+    [vWLocationAttributes].[TestMasterID] AS [TestMasterID]
+    FROM [dbo].[vWLocationAttributes] AS [vWLocationAttributes]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Equations_Tests" Association="Self.FK_Equations_Tests">
+      <End Role="Tests" EntitySet="Tests" />
+      <End Role="Equations" EntitySet="Equations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InputFields_InputFieldsValue" Association="Self.FK_InputFields_InputFieldsValue">
+      <End Role="InputFields" EntitySet="InputFields" />
+      <End Role="InputFieldsValue" EntitySet="InputFieldsValue" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PartAttributes_Tests" Association="Self.FK_PartAttributes_Tests">
+      <End Role="Tests" EntitySet="Tests" />
+      <End Role="PartAttributes" EntitySet="PartAttributes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Test_TestInputs" Association="Self.FK_Test_TestInputs">
+      <End Role="Tests" EntitySet="Tests" />
+      <End Role="TestInputs" EntitySet="TestInputs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestAttributes_Tests" Association="Self.FK_TestAttributes_Tests">
+      <End Role="Tests" EntitySet="Tests" />
+      <End Role="TestAttributes" EntitySet="TestAttributes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestCalculatedFields_Tests" Association="Self.FK_TestCalculatedFields_Tests">
+      <End Role="Tests" EntitySet="Tests" />
+      <End Role="TestCalculatedFields" EntitySet="TestCalculatedFields" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestInputs_InputFields" Association="Self.FK_TestInputs_InputFields">
+      <End Role="TestInputs" EntitySet="TestInputs" />
+      <End Role="InputFields" EntitySet="InputFields" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestMaster_Tests" Association="Self.FK_TestMaster_Tests">
+      <End Role="TestMaster" EntitySet="TestMaster" />
+      <End Role="Tests" EntitySet="Tests" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestMasterMapping_LocationMaster" Association="Self.FK_TestMasterMapping_LocationMaster">
+      <End Role="LocationMaster" EntitySet="LocationMaster" />
+      <End Role="TestMasterMapping" EntitySet="TestMasterMapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestMasterMapping_PartMaster" Association="Self.FK_TestMasterMapping_PartMaster">
+      <End Role="PartMaster" EntitySet="PartMaster" />
+      <End Role="TestMasterMapping" EntitySet="TestMasterMapping" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TestMasterMapping_TestMasterMapping" Association="Self.FK_TestMasterMapping_TestMasterMapping">
+      <End Role="TestMaster" EntitySet="TestMaster" />
+      <End Role="TestMasterMapping" EntitySet="TestMasterMapping" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

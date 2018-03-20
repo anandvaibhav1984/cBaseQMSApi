@@ -1,0 +1,395 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<script>
+    $(document).ready(function () {
+        $('.test-menubar li').removeClass('active-page');
+        $('.PartAttribute').addClass('active-page');
+    });
+</script>
+
+<div class="container-fluid part-attribute">
+    <div class="row">
+        <!-- left section code start here -->
+       
+            <!-- top form section -->
+            <div class="col-xs-12 ">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label for="Tests" class="control-label tests-select">Part Number:</label>
+                        <div class="col-xs-8 col-md-5">
+                            <select class="form-control">
+                                <option>138-004105-01</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Tests" class="control-label tests-select">Test:</label>
+                        <div class="col-xs-8 col-md-5">
+                            <select class="form-control">
+                                <option>138-004105-01</option>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>               
+            </div>
+
+            <!-- grid section -->
+        <div class="col-xs-12 col-md-7 col-lg-8">
+            <div class="check-inactive" style="margin-bottom:5px; margin-top:0px;">
+                <input type="checkbox" name="showInactive" id="showInactive2">
+                <label class="check-inactive-label" for="showInactive2"></label>
+                <span>Show Inactive</span>
+            </div>
+            <div class="attriubute-grid-bg">
+                <table class="table table-bordered table-striped cBase-custom-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>
+                                Attribute Names
+                            </th>
+                            <th>
+                                Input Field
+                            </th>
+                            <th>
+                                Min. Value
+                            </th>
+                            <th>
+                                Max. Value
+                            </th>
+                            <th>
+                                UOM
+                            </th>
+                            <th>
+                                Active
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                XRedRange
+                            </td>
+                            <td>
+                                XRed
+                            </td>
+                            <td>
+                                0.638
+                            </td>
+                            <td>
+                                0.642
+                            </td>
+                            <td></td>
+                            <td>
+                                True
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                XRedRange
+                            </td>
+                            <td>
+                                XRed
+                            </td>
+                            <td>
+                                0.638
+                            </td>
+                            <td>
+                                0.642
+                            </td>
+                            <td></td>
+                            <td>
+                                True
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                XRedRange
+                            </td>
+                            <td>
+                                XRed
+                            </td>
+                            <td>
+                                0.638
+                            </td>
+                            <td>
+                                0.642
+                            </td>
+                            <td></td>
+                            <td>
+                                True
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                XRedRange
+                            </td>
+                            <td>
+                                XRed
+                            </td>
+                            <td>
+                                0.638
+                            </td>
+                            <td>
+                                0.642
+                            </td>
+                            <td></td>
+                            <td>
+                                True
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                XRedRange
+                            </td>
+                            <td>
+                                XRed
+                            </td>
+                            <td>
+                                0.638
+                            </td>
+                            <td>
+                                0.642
+                            </td>
+                            <td></td>
+                            <td>
+                                True
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                XRedRange
+                            </td>
+                            <td>
+                                XRed
+                            </td>
+                            <td>
+                                0.638
+                            </td>
+                            <td>
+                                0.642
+                            </td>
+                            <td></td>
+                            <td>
+                                True
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                XRedRange
+                            </td>
+                            <td>
+                                XRed
+                            </td>
+                            <td>
+                                0.638
+                            </td>
+                            <td>
+                                0.642
+                            </td>
+                            <td></td>
+                            <td>
+                                True
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- bottom form section -->
+            <div class="location-grey-bg">
+                <!-- First line form -->
+                <form class="form-horizontal label-full-width">
+                    <div class="form-group col-xs-7 padding-all-zero">
+                        <label class="col-xs-3 col-md-12 col-lg-3 padding-all-zero control-label ">Attributes Name:</label>
+                        <div class="col-xs-7 col-md-9 col-lg-7 ">
+                            <input type="text" class="form-control" value="XRedRange">
+                        </div>
+                        <div class="col-xs-2 col-md-3 col-lg-2 padding-all-zero">
+                            <button type="button" title="Rename" class="btn btn-default btn-block common-btn common-btn-animation submit-btn">Rename</button>
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-5  padding-right-zero">
+                        <label for="Tests" class="col-xs-4 col-md-12 col-lg-4 padding-all-zero control-label  ">Input Field:</label>
+                        <div class="col-xs-8 col-md-12 col-lg-8 ">
+                            <select class="form-control">
+                                <option>XRed</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-horizontal col-xs-7 padding-all-zero">
+                        <div class="form-group col-xs-6 padding-all-zero">
+                            <label for="Tests" class="col-xs-6 col-md-12 col-lg-6 padding-all-zero control-label ">Min. Value:</label>
+                            <div class="col-xs-6 col-md-12 col-lg-6 padding-right-zero">
+                                <input type="text" class="form-control" value="0.638">
+                            </div>
+                        </div>
+                        <div class="form-group col-xs-6 padding-right-zero">
+                            <label for="Tests" class="col-xs-5 col-md-12 col-lg-5 padding-all-zero control-label ">Max. Value:</label>
+                            <div class="col-xs-7 col-md-12 col-lg-7 padding-right-zero">
+                                <input type="text" class="form-control" value="0.642">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-5 padding-right-zero">
+                        <label for="Tests" class="col-xs-4 col-md-12 col-lg-4 padding-all-zero control-label ">UOM:</label>
+                        <div class="col-xs-8 col-md-12 col-lg-8 ">
+                            <select class="form-control">
+                                <option>--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-7 padding-all-zero">
+                        <label for="Tests" class="col-xs-3 padding-all-zero control-label ">Active:</label>
+                        <div class="col-xs-6">
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> True
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> False
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group col-xs-5 padding-right-zero">
+                        <div class="col-xs-8 col-sm-offset-4 col-md-12 col-lg-8 pull-right ">
+                            <button type="button" title="Add" class="btn btn-default common-btn common-btn-animation submit-btn">Add</button>
+                            <button type="button" title="Delete" class="btn btn-default common-btn common-btn-animation reset-btn">Delete</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- left section code end here -->
+        <!-- right section code start here -->
+        <div class="col-xs-12 col-md-5 col-lg-4">
+            <!-- grid code start here -->
+            <div class="attriubute-grid-bg" style="margin-top:27px">
+                <table class="table table-bordered table-striped cBase-custom-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>
+                                Critical Components
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                000-102986-01: ASSY Optical Engine S2K
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                000-102986-01: ASSY Optical Engine S2K
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                000-102986-01: ASSY Optical Engine S2K
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                000-102986-01: ASSY Optical Engine S2K
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                000-102986-01: ASSY Optical Engine S2K
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                000-102986-01: ASSY Optical Engine S2K
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </td>
+                            <td>
+                                000-102986-01: ASSY Optical Engine S2K
+                            </td>
+                        </tr>
+                        <tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- bottom form start here -->
+            <div class="location-grey-bg">
+                    <form class="form-horizontal label-full-width">
+                        <div class="form-group">
+                            <label class="col-xs-2 col-md-12 col-lg-2 padding-right-zero control-label ">Part:</label>
+                            <div class="col-xs-6 col-md-12 col-lg-6 ">
+                                <select class="form-control">
+                                    <option>000-102958-01: ASSY L</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-4 col-md-5 col-lg-4 padding-all-zero part-btn-spacing">
+                               <div class="col-xs-6 padding-left-zero">
+                                <button type="button" title="Add" class="btn btn-default btn-block common-btn common-btn-animation submit-btn">Add</button>
+                                   </div>
+                                <div class="col-xs-6 padding-left-zero">
+                                    <button type="button" title="Delete" class="btn btn-default btn-block common-btn common-btn-animation reset-btn">Delete</button>
+                                </div>
+                                </div>
+                        </div>
+                      
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <!-- right section code ends here -->
+
+    </div>
+</div>
+

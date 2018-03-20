@@ -1,0 +1,21 @@
+﻿[{
+  "error_msg": [
+    {
+      "TestMasterViewModel": [
+        {
+          "Insert": "Test Master  has been inserted succesfully",
+          "update": "Test Master  Update Successfully",
+          "Delete": "Test Master   removed successfully"
+        }
+      ],
+      "TestMasterMappingViewModel": [
+        {
+          "Insert": "location and part mapping has been inserted succesfully",
+          "update": "location and part mapping Updated Successfully",
+          "Delete": "location and part mapping removed"
+        }
+      ]
+    }
+  
+  ]
+}]

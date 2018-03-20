@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    <link href="~/Areas/Content/cBase-class.css" rel="stylesheet" />
+    <link href="~/Areas/Content/cBase-class-media.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+</head>
+<body>
+    <div class="header">
+        <ul class="main-header ">
+            <li class="logo col-xs-2">cBase</li>
+            <li>Home</li>
+            <li>Part</li>
+            <li style="background:#000; color:#FFF;">
+                @Html.ActionLink("Test", "Index", "TestMaster", new { Area = "cBaseQMS" }, null)
+            </li>
+            <li>Report</li>
+            <li>Configure</li>
+            <li>Administration</li>
+            <li class="acc-btn">
+                <div>Username</div>
+                <div>Logout</div>
+            </li>
+        </ul>
+    </div>
+    <div>
+        @RenderBody()
+        @*<hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>*@
+    </div>
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

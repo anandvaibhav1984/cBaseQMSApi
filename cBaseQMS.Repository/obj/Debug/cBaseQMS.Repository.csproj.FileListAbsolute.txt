@@ -1,0 +1,15 @@
+D:\WorkSpace\cBase\Source Code\cBaseQMSApi\cBaseQms.Repository\bin\Debug\cBaseQms.Repository.dll.config
+D:\WorkSpace\cBase\Source Code\cBaseQMSApi\cBaseQms.Repository\bin\Debug\cBaseQms.Repository.dll
+D:\WorkSpace\cBase\Source Code\cBaseQMSApi\cBaseQms.Repository\bin\Debug\cBaseQms.Repository.pdb
+D:\WorkSpace\cBase\Source Code\cBaseQMSApi\cBaseQms.Repository\bin\Debug\cBaseQms.DAL.dll
+D:\WorkSpace\cBase\Source Code\cBaseQMSApi\cBaseQms.Repository\bin\Debug\EntityFramework.dll
+D:\WorkSpace\cBase\Source Code\cBaseQMSApi\cBaseQms.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\WorkSpace\cBase\Source Code\cBaseQMSApi\cBaseQms.Repository\bin\Debug\cBaseQms.DAL.pdb
+D:\WorkSpace\cBase\Source Code\cBaseQMSApi\cBaseQms.Repository\bin\Debug\cBaseQms.DAL.dll.config
+D:\WorkSpace\cBase\Source Code\cBaseQMSApi\cBaseQms.Repository\bin\Debug\EntityFramework.xml
+D:\WorkSpace\cBase\Source Code\cBaseQMSApi\cBaseQms.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\WorkSpace\cBase\Source Code\cBaseQMSApi\cBaseQms.Repository\obj\Debug\cBaseQMS.Repository.csprojResolveAssemblyReference.cache
+D:\WorkSpace\cBase\Source Code\cBaseQMSApi\cBaseQms.Repository\obj\Debug\cBaseQMS.Repository.csproj.CoreCompileInputs.cache
+D:\WorkSpace\cBase\Source Code\cBaseQMSApi\cBaseQms.Repository\obj\Debug\cBaseQMS.Repository.csproj.CopyComplete
+D:\WorkSpace\cBase\Source Code\cBaseQMSApi\cBaseQms.Repository\obj\Debug\cBaseQms.Repository.dll
+D:\WorkSpace\cBase\Source Code\cBaseQMSApi\cBaseQms.Repository\obj\Debug\cBaseQms.Repository.pdb
